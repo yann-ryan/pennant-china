@@ -1,0 +1,258 @@
+---
+title: "Pennant China Journey"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme: 
+      version: 4
+      bootswatch: litera
+---
+
+<style type="text/css">
+  body{
+  font-family: Times;
+}
+</style>
+
+General Map
+=====================================  
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(leaflet)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('l')
+l
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### **Journey Information**
+
+We could add information on the journeys here for example. 
+
+```{r}
+
+```
+
+### Other information
+
+```{r}
+
+```
+
+Pennant Coastal Journey
+=====================================  
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('pennant_coastal_leaflet')
+pennant_coastal_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+Wedi dilyn taith fewndirol Johan Nieuhof, dychwelodd Pennant i Guangzhou (Canton) er mwyn teithio ar hyd yr arfordir o'r de i'r gogledd ('[to] pursue the topography of the coasts'), nod cwbl hanfodol yng nghyswllt y cyfanwaith y deilliai'r adroddiad o Tsieina ohono, 'Outlines of the Globe'. Nododd yn yr achos hwn mor gyfyngedig oedd gwybodaeth y Gorllewin o'r traethau a'r harbyrau hyn. Ychydig iawn a allai ei ddweud am ystod rhwng dwy a thair mil o'r arfordir, meddai, ond ei fod yn ymddangos yn arw ac yn llawn baeau, porthladdoedd, a morgeinciau ('bays, harbors, and creeks').
+
+Y mae'r adroddiad sy'n dilyn yn rhoi sylw i nodweddion daearyddol amrywiol, yn daleithiau, ynysoedd, afonydd, llynnoedd, a dinasoedd. Blasir cyd-destun Ewropeaidd cyswllt Pennant â'r lleoliadau hyn drwy gyfrwng yr enwau: dewiswyd enwau disgrifiadol Ewropeaidd ar ynysoedd 'Ladrone'; craig dâl wen 'Piedra Biancas'; a'r ynysoedd a enwir 'Asses ears', er enghraifft. Ar y cyfan, serch hynny, ymgeisiadau i gynrychioli seiniau arwyddnodau logograffig Tsieinëeg ar ffurf llythrennau Rhufeinig a welir yn yr enwau a ddefnyddir. Y gyntaf o ddwy system o Rufeinio'r iaith a ddaeth i fri yn ystod yr ugeinfed ganrif oedd system Wade-Giles, a grëwyd gan y llysgennad Prydeinig i Tsieina Thomas Francis Wade (1818–1895) a'i datblygu gan y sinolegydd Herbert Allen Giles (1845–1935). Mewn geiriadur Tseinëeg–Saesneg a gyhoeddodd Giles yn 1892 gwnaed camau breision er sefydlu ei system trawslythrennu ef a Wade fel safon ar gyfer Rhufeinio arwyddnodau Tseinëeg, gyda diwygiadau pellach yn 1912 gan Giles a'i fab Lionel (1875–1958). Yn ystod ail ddegawd yr ugeinfed ganrif, bu trafodaethau a datblygiadau hefyd ynghylch Rhufeinio enwau lleoedd, pan safonwyd enwau taleithiau, dinasoedd, a threfi ac, yn 1919 enwau mynyddoedd ac afonydd yn ogystal yn Atlas Post Tsieineaidd 1919. Safodd system Wade-Giles ei thir fel yr un safonol mewn llyfrau am Tsieina a gyhoeddwyd cyn 1979, pan gymerwyd ei lle i raddau helaeth gan pinyin, system yn deillio o'r 1950au a fabwysiadwyd gan lywodraeth Tsieina yn 1958. Yn rhagflaenu'r ddwy system hon, fodd bynnag, yr oedd systemau lluosog o drawslythrennu. Nid yw o fewn cwmpas y gwaith presennol i olrhain seiliau'r systemau a ddefnyddiodd Pennant, ond gellir nodi cymhlethdod ac anhawster y gwaith o bennu pa leoliad a olygir oddi wrth enwau yn ei systemau Rhufeinio cynnar ef o'u cymharu ag enwau lleoedd mewn pinyin cyfredol. Rhoddwyd sylw i sylwadau Pennant ynghylch daearyddiaeth y lleoliadau wrth eu hadnabod. (Gw. siartiau isod.)
+
+
+```{r}
+
+```
+
+### Other information
+
+A. R. H., The Romanization of Chinese Place-Names, The Geographical Journal, cyf. 102, rhif 2 (1943), 67–71, ar <https://www.jstor.org/stable/1790134>
+de Ven, Hans J. van, 'Wade, Sir Thomas Francis (1818–1895), yn ODNB, ar <https://doi.org/10.1093/ref:odnb/28382> [cyrchwyd 20 Rhagfyr 2022]
+Dienw, 'Chinese Romanization Converter', ar <http://www.mandarintools.com/pyconverter.html> [cyrchwyd 21 Rhagfyr 2022]
+Dienw, 'Wade-Giles', yn New World Encyclopedia, ar <https://www.newworldencyclopedia.org/entry/Wade-Giles#cite_note-2> [cyrchwyd 20 Rhagfyr 2022]
+Ryan, Janette, 'Giles, Herbert Allen (1845–1935), yn ODNB, ar <https://doi.org/10.1093/ref:odnb/33401> [cyrchwyd 20 Rhagfyr 2022]
+
+
+
+Francis de Xavier
+=====================================  
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('xavier_leaflet')
+xavier_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+Rhoddodd Pennant adroddiad ar waith Francis de Xavier (1506–1552) ar ran ei urdd, y Jeswitiaid, yn ei gyfrol am India a dim ond adroddiad cryno iawn ar ei waith a geir yma, felly. Disgrifir mordaith Xavier o Goa i Japan a'i genhadaeth yno, cyn ei ymgais i fynd i Tsieina i ymestyn cwmpas ei waith. Fe'i rhwystrwyd, meddai Pennant, rhag siom cael ei wrthod gan y Tsieiniaid, a oedd yn hynod gyndyn o adael i unrhyw un gael mynediad i'w teyrnas, gan i'w oes ddod i ben ar ynys Sancian. Cafodd ei gladdu yno ac, fel y gweddai i ŵr crefyddol, gwarchodwyd ei gorff yn ddi-nam yn ei arch am hanner can mlynedd. Fe'i dygwyd i Goa bryd hynny i'w anrhydeddu.
+
+### Other information
+
+Cyfeiriadau a darllen pellach:
+Pennant, Thomas, The View of India Extra Gangem, China and Japan, gol. gan David Pennant (London, 1800), t. 95
+idem, The View of Hindoostan, 2 gyf. (London, 1798), I, tt. 113–14
+
+
+Matteo Ricci
+=====================================  
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('ricci_leaflet')
+ricci_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+Brodor o Macerata, Marche, ardal yn nwyrain canolbarth yr Eidal, oedd Matteo Ricci (1552–1610). Yn dilyn ei genhadaeth i Tsieina o 1583 ymlaen, barnai Pennant ei fod yn haeddu'r teitl a roddwyd arno, sef sylfaenydd a thad yr eglwys Tsieiniaidd. Adroddodd sut y paratôdd Ricci, ynghyd â Roger o Napoli a Francesco Pasio (1554–1612) o Bologna, at yr ymweliad hwn drwy dreulio amser yn meistrioli Tsieinieg yn Goa, yn ardal Konkan yng ngorllewin India. Llwyddwyd i gael mynediad i lys yr Ymerawdwr Wanli (teyrnasai 1572–1620) ac, wedi i Roger a Passio gael eu galw oddi yno, parhaodd Ricci â'r genhadaeth yn Tsieina gan sicrhau troedigion drwy uno arferion Conffiwsaidd a Christnogol. Bedyddiodd fandariniaid a phwysigion gan gynnwys dwy wraig weddw ariannog, Candida ac Agatha, cyn ei farwolaeth yn Beijing yn 1610.
+
+Daethai gwybodaeth am waith Ricci i sylw Ewrop drwy gyfrwng llyfrau o ohebiaeth printiedig a llythyrau blynyddol a anfonai ef a chenhadon eraill gartref, ac a gyhoeddid mewn canolfannau amlwg yn yr Eidal a thu hwnt. Yn fwy allweddol byth, yn 1615, ymddangosodd dyddiadur Ricci ynghylch y genhadaeth i Tsieina o'r wasg, wedi'i baratoi gan ei gyd-Jeswit Nicolas Trigault (1577–1628). Nod Trigault yn De Christiana expeditione apud Sinas suscepta ab Societate Jesu (Ynghylch alltaith Gristnogol Cymdeithas yr Iesu i blith y Tsieiniaid) oedd sicrhau annibynniaeth y genhadaeth i Tsieina a'i hyfywedd ar gyfer y dyfodol, a chreodd o gofnodion Ricci waith hagiograffaidd a ddarluniai lwyddiant y Jeswitiaid i 'fachu' pobl Tsieina i gorlan Cristnogaeth. Diogelwyd enw da Ricci a'r genhadaeth gan yr hanes a roddodd Trigault ynghylch ei gladdu yn Beijing, 'highly respected' fel yr adroddodd Pennant, â'r ymerawdwr yn cael ei berswadio i ganiatâu'r anrhydedd honno (pur unigryw i dramorwr) wedi iddo sylwi ar glociau'r Jeswitiaid – dyfeisiadau newydd a syfrdanol ymhlith y Tsieiniaid.
+
+
+### Other information
+
+Cyfeiriad a darllen pellach:
+Hsia, Florence C., Sojourners in a Strange Land: Jesuits and their Scientific Missions in Late Imperial China (Chicago, 2009), tt. 21–9
+Pennant, Thomas, The View of India Extra Gangem, China and Japan, gol. gan David Pennant (London, 1800), tt. 96–7 
+
+
+Fernäo Pires de Andrade
+=====================================  
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('andrade_leaflet')
+andrade_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+Adroddodd Pennant sut, yn 1515, y penderfynodd Lopo Soares de Albergaria (c.1460–c.1520), llywodraethwr Portiwgal yn India, anfon teithwyr i archwilio Tsieina. Dewisodd y marsiandwr Andrada (Fernäo Pires de Andrade; bu farw 1552) fel arweinydd, a gadawodd yr archwilwyr Malacca ym mis Mehefin 1517, gan hwylio hyd ynys Tamanlabua, bedair milltir Ffrengig ('league') o dir mawr Tsieina. Yno, daeth i lwybr haid o fôrladron, ond gan na ddangosodd Andrada unrhyw awydd i ymladd, gadawsant iddo angori oddi ar arfordir Ynys Tama. Cydnabu Pennant mai 'Osorio', sef Jerónimo Osório da Fonseca (1506–80), oedd ffynhonnell ei wybodaeth ac fe'n harweinir gan ei gyfeiriad manwl (cyf. II, t. 244) at gyfieithiad cymharol ddiweddar gan James Gibbs o waith yr hanesydd hwnnw.
+
+Y mae lleoliad yr ynys a enwir wrth ddau enw gwahanol yn naratif Pennant yn peri anhawster. Gellir cynnig o ystyried yr wybodaeth a roddir mai ynys Hainan, ddeuddeg milltir o arfordir Tsieina yw 'Tamanlabua'. Ar y llaw arall, os yr un ynys yw 'Tama' a enwir yn ddiweddarach gan ei chysylltu â mangre adeiladu tref Macao, nid yr un fyddai'r lleoliad. Y mae anhawster Pennant i'w synhwyro yn ei ymdrech i gysylltu 'Tama' a lleoliad a nodwyd gan yr Iseldirwr Johan Nieuhof, a'i enwi 'Heytamon'.
+
+### Other information
+
+Cyfeiriad a darllen pellach:
+Osorio, Jerome, The history of the Portuguese, during the reign of Emmanuel: ... Written originally in Latin by Jerome Osorio, ... Now first translated into English by James Gibbs (London, 1752), tt. 244–6
+Pennant, Thomas, The View of India Extra Gangem, China and Japan, gol. gan David Pennant (London, 1800), tt. 113–14 
+
+
+Johan Nieuhof
+=====================================  
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('nieuhof_leaflet')
+nieuhof_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+We could add information on the journeys here for example. 
+
+'John Nieuhoff, the celebrated traveller of the last century, is the only one who gives an account of the entire inland voyage from the south to almost the very north of the mighty empire' (OG, III, t. 134)
+
+### Other information
+
+
+
+Marco Polo
+=====================================  
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+load('polo_leaflet')
+polo_leaflet
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Journey Information
+
+Yr oedd Marco Polo (1254–1324), mab i farsiandwr o Fenis, ymhlith y teithwyr Ewropeaidd cynharaf i Tsieina, a'i adroddiad o'i daith yn sicr yn arloesol. Pan oedd Marco'n dal yn ei fabandod, teithiasai ei dad Niccolò a'i ewythr Maffeo o dan amgylchiadau cythryblus drwy diriogaethau Mongol cyn belled â lleoliad a ddisgrifiasant fel 'pen draw'r byd'. Yno, daethant i gysylltiad ag arweinydd y Mongoliaid, Khan Khubilai mewn dinas a elwid gan Khubilai yn 'Daidu', sef Beijing yn ddiweddarach. Anfonwyd hwy gan Khubilai gyda negeseuon i'r Pâb Clement IV, ond wedi clywed yn ystod eu siwrnai adref am ei farwolaeth, dychwelodd y ddau i Fenis yn 1269. Oherwydd eu hawydd i feithrin perthynas fasnachol â Khubilai, penderfynodd y brodyr fentro drachefn am Tsieina yn 1271, ac ymunwyd â hwy gan Marco, a oedd yn ddwy ar bymtheng mlwydd oed erbyn hynny. Ailafaelwyd yn y berthynas â Khubilai, â Marco yn arbennig yn dod yn ffefryn ganddo. Fe'i hanfonwyd ar deithiau pell, gyda'r disgwyliad y byddai'n adrodd ei hanes gerbron Khubilai. Credir iddo deithio o Beiing cyn belled â Burma i'r de-orllewin; Quanzhou i'r de; ac ar fordaith i dde-ddwyrain Asia.
+
+Bu dadlau ffyrnig ymhlith haneswyr ynghylch awduraeth amryfal fersiynau llawysgrif o hanes taith Marco. Bellach credir bod llais gŵr a adwaenid fel Rustichello o Pisa, awdur rhamantau a gyfarfu Marco yng ngharchar Genoa wedi ei ddychweliad i'r Eidal, yn ddylanwadol yn y fersiwn wreiddiol (gw. Cliff (2015), t. xiii). Cyfieithwyd y gwaith i bron bod iaith a thafodiaith Ewropeaidd, â sylwebwyr Jeswitaidd megis Martini (1654), Kircher (1667) a Du Halde (1735) yn cadarnhau geirwiredd nifer o honiadau Marco. Ym Mhrydain, daeth i sylw drwy gasgliad o destunau teithio a gyweiniwyd gan yr Albanwr John Pinkerton (1808–14); a sicrhaodd cyfieithiad y dwyreinydd William Marsden (1818), gyda'i nodiadau trylwyr i gyd-destunoli'r gwreiddiol, bod gwaith Marco erbyn dechrau'r bedwaredd ganrif ar bymtheg yn cael ei ystyried yn glasur. Yr oedd y sylw hwn yn ôl-ddyddio cyfnod Pennant, serch hynny, a gwyddom mai drwy gyfieithiad i'r Ffrangeg gan Pierre de Bergeron (1735), gwaith y clerigwr Samuel Purchas (yn seiliedig ar bapurau anghyoeddedig Richard Hakluyt) ac, yn fwyaf arbennig, waith ei gydnabod Johann Reinhold Forster y byddai ef wedi darllen gwaith Marco. Ceir adleisio geiriol amlwg iawn yn adroddiad Pennant o waith Forster ar Marco Polo.
+
+Cyfeiriodd Pennant at ddechreuadau anturiaethau Niccolò a Maffeo yn Constantinople a hefyd at wybodaeth a adroddwyd gan Marco ynghylch ei deithiau ef. Pytiog yw'r wybodaeth a ddefnyddiodd, fodd bynnag, ac ni ellir tynnu ohoni ddarlun crwn o'r un o'r teithiau. I raddau, codai'r diffyg hwn – os diffyg – o natur adroddiadau Marco Polo ei hunan. Diau y byddai Pennant wedi cytuno â Forster, a nododd 'It appears that Marco Polo does not point out the situations of his places in their proper order, but goes from one to another, just as his fancy leads him, though perhaps they do not lie immediately contiguous'. Rhoddwyd gan Pennant ddisgrifiad manwl o ddinas a alwodd Marco wrth yr enw Tien-sing-foo. Fel mewn enghraifft flaenorol, defnyddiodd dybiaethau Johan Nieuhof wrth drafod y ddinas, gan ei chysylltu y tro hwn gyda 'Quinsay' yr Eidalwr. Awgrymir mewn golygiad diweddar o deithiau Marco Polo mai Hangzhou yn nhalaith Zhejiang, sef cyn-brifddinas brenhinlin y Song Deheuol (1127–1279) oedd 'Quinsay', neu 'Xingzai' ('Quinsai', 'Kinsay' yn ôl Marco). (Gw. Cliff (2015), t. xxvi.)
+
+Caiff taith ogleddol a wnaed gan Marco Polo sylw ychydig manylach gan Pennant, sy'n nodi sut yr arweiniwyd Marco dros gyfnod o ddeuddeng niwrnod dros wastatir 'Pamer' (Pamir). Defnyddiodd dystiolaeth Marco hefyd i drafod dinasoedd hynafol megis 'Hierkin' ('Carcham' iddo ef) a droediwyd gan deithwyr a masnachwyr yr Oesoedd Canol ac a oedd yn hysbys o dan enwau eraill eto i'r mathemategwr a'r daearyddwr Ptolemy (c.100–c.170 OC). Adroddodd Marco mai Moslemiaid ac ychydig Nestoriaid (sef sect a darddai o Syria ac Asia Leiaf, neu Dwrci heddiw) oedd trigolion yr 'Hierkin' hynafol yn nheyrnas Tanguth, sy'n cyfateb i ddinas Shache heddiw. Yn yr un ardal yr oedd dinas Lop, wedi'i lleoli mewn anialwch o'r un enw, meddai Pennant. Adroddodd bod Marco Polo fel petai wedi croesi'r lleoliad anghyfannedd hwn yn y rhan fwyaf peryglus, gan groesi tywod ansefydlog neu fynyddyddoedd gerwin, lle nad oedd anifeiliaid nac adar na phrin unrhyw ddŵr i'w ganfod. Yr oedd croeso trigolion 'Camul' (Hami) gerllaw yn werthfawr iawn i deithwyr a fynnai eu lletya yn eu cartrefi, meddai Marco, a bu peth anghytuno pan gyfarwyddwyd hwy gan un o'u harweinwyr i adeiladu tafarndai yn hytrach na chynnig eu cymwynasgarwch fel hyn.
+
+
+
+### Other information
+
+Cyfeiriadau a darllen pellach
+Cliff, Nigel, 'Introduction', yn Marco Polo: The Travels, cyfieithwyd gan Nigel Cliff (Penguin, 2015), tt. xi–xlii, yn enw. t. xv
+Forster, Johann Reinhold, History of the voyages and discoveries made in the north. Translated from the German of John Reinhold Forster, I.U.D. and elucidated by a new and original map of the countries situated about the North Pole (London, 1786), tt. 117–147, gyda dyfyniad ar t. 142n
+Osterhamel, Jürgen, cyfieithwyd gan Robert Savage (Princeton, New Jersey, 2018), tt. 228, 229, 238–9, 553 n. 116
+Pennant, Thomas, The View of India Extra Gangem, China and Japan, gol. gan David Pennant (London, 1800), tt. 111–12, 145–6, 175, 176–7, 179
+Purchas, Samuel, Hakluytus Posthumus or, Purchas his Pilgrimes: Contayning a History of the World in Sea Voyages and Lande Travells by Englishmen and Others (1625; Cambridge, 2014)
+Bergeron, Pierre de, Voyages faits principalement en Asie, dans les XII, XIII, XIV et XV siècles, par Benjamin de Tudèle, Jean Du Plan-Carpin, M. Ascelin, Guillaume de Rubruquis, Marc-Paul vénitien, Haiton, Jean de Mandeville et Ambroise Contarini, accompagnés de l'histoire des Sarrazins et des Tartares et précédés d'une introduction concernant les voyages et les nouvelles découvertes des principaux voyageurs, 2 gyf. (La Haye, 1735)
+
+
+Further Information
+=====================================  
+
+Journeys
+===================================== 
+
+#### Pennant Coastal Journey
+
+Slightly longer description of journey here maybe, can add higher-res images if needed. 
+
+
+#### Marco Polo Journey
+
+#### Etc., etc. 
