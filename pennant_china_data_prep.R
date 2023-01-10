@@ -47,7 +47,7 @@ all_provinces = pennant_annotations %>% filter(!is.na(TYPE)) %>%
 
 all_countries = ne_countries(scale = 10, returnclass = 'sf')
 
-all_countries_sf = pennant_annotations %>% filter(!is.na(TYPE)) %>% 
+all_countries_sf = pennant_annotations %>% filter(!is.na(TYPE)) %>% distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
  # mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
   #mutate(context = paste0("<i>...", context, "...</i>"))%>% distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
   inner_join(all_countries, by = c('VOCAB_LABEL'  = 'name')) %>% sf::st_as_sf() %>% 
@@ -58,8 +58,8 @@ all_countries_sf = all_countries_sf %>% st_set_crs(4326)
 pennant_full_sf  = pennant_full_sf %>% filter(!UUID %in% c(all_countries_sf$UUID, all_provinces$UUID))
 
 l = leaflet() %>%
-  addProviderTiles(providers$OpenStreetMap.Mapnik) %>% setView(50, 30, zoom = 2)%>% 
-  addPolygons(data = all_countries_sf, popup = ~info, fillColor = 'lightblue', color = 'black', weight = 2, group = 'Gwledydd')%>% 
+  addProviderTiles(providers$OpenStreetMap.Mapnik) %>% setView(50, 30, zoom = 2) %>% 
+  addPolygons(data = all_countries_sf, popup = ~info, fillColor = 'lightblue', color = 'black', weight = 2, group = 'Gwledydd') %>% 
   addPolygons(data = all_provinces,  popup = ~info, fillColor = 'forestgreen', color = 'black', weight = 2, group = 'Taleithiau')  %>% 
   addCircleMarkers(data = pennant_full_sf, label = ~VOCAB_LABEL,  popup =~info ,
                    radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9', group = 'Lleoliadau (dinasoedd)') %>%
@@ -171,33 +171,29 @@ andrade_leaflet = leaflet() %>%
 
 save(andrade_leaflet, file = 'andrade_leaflet')
 
+n = sf::st_read('/Users/yannryan/Downloads/Taith_Johan_Nieuhof_yn_Tsieina.geojson')
 
 
+n = n %>% filter(name != '') %>% 
+  filter(id != 'ce232e50-3f5d-4c29-86f5-29e82cc98966') %>% 
+  left_join(pennant_annotations, by = c('name' = 'UUID')) %>% 
+  mutate(for_popup = paste0("<b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Authority file: </b><a href='", URI,"'>",VOCAB_LABEL, "</a><br><b>Info: </b>", info))
 
-nieuhof = pennant_annotations %>% filter(str_detect(TAGS, "journey_nieuhof"))
+n_uncertain = n %>% filter(str_detect(X1, "_ansicr"))
 
-nieuhof = nieuhof %>% 
-  mutate(extra_coords = str_extract(X1, "([-+]?\\d{1,2}[.]\\d+),\\s*([-+]?\\d{1,3}[.]\\d+)")) %>% 
-  separate(extra_coords, into = c('LAT2', 'LNG2'), sep = ',') %>% mutate(LAT2 = as.numeric(LAT2)) %>% 
-  mutate(LNG2 = as.numeric(LNG2)) %>% 
-  mutate(LAT = coalesce(LAT, LAT2))%>% 
-  mutate(LNG = coalesce(LNG, LNG2))
+n_certain = n %>% filter(!str_detect(X1, "_ansicr"))
 
-nieuhof_sf = nieuhof %>% 
-  filter(!is.na(LAT)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
- # mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context))  %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info))%>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
-
-nieuhof_leaflet = leaflet()  %>% setView(120, 30, zoom = 5) %>%
+nieuhof_leaflet = leaflet() %>%
   addTiles( 
-    group='Historic Map', urlTemplate = 'https://maps.georeferencer.com/georeferences/498f6114-6109-50ff-a476-b6ce9a340c06/2019-10-08T11:46:44.143428Z/map/{z}/{x}/{y}.png?key=mp8Uneu8RsMxOKqs5e9C')   %>% 
-  addCircleMarkers(data = nieuhof_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = 'blue')
+    group='Historic Map', urlTemplate = 'https://maps.georeferencer.com/georeferences/498f6114-6109-50ff-a476-b6ce9a340c06/2019-10-08T11:46:44.143428Z/map/{z}/{x}/{y}.png?key=mp8Uneu8RsMxOKqs5e9C')  %>% 
+  addCircleMarkers(data = n_uncertain, label = ~QUOTE_TRANSCRIPTION, popup = ~for_popup,
+                   radius = 7, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = 'red') %>% 
+  addCircleMarkers(data = n_certain, label = ~QUOTE_TRANSCRIPTION, popup = ~for_popup,
+                   radius = 7, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = 'blue')
+
 
 save(nieuhof_leaflet, file = 'nieuhof_leaflet')
+
 
 pennant_coastal = pennant_annotations %>% filter(str_detect(TAGS, "journey_pennant coastal_01"))
 
