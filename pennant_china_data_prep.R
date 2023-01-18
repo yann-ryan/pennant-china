@@ -7,62 +7,94 @@ library(leaflet)
 
 source('ne_scripts.R')
 
-pennant_annotations = read_csv('/Users/yannryan/Downloads/5x7kygxisii40w (11).csv')
+download.file('https://recogito.pelagios.org/document/5x7kygxisii40w/downloads/annotations/csv', 'pennant.csv')
 
-text_vec = c()
+pennant_annotations = read_csv('pennant.csv')
+# 
+# text_vec = c()
+# 
+# for(row in 1:nrow(pennant_annotations)){
+#   
+#   text = read_file(paste0("/Users/yannryan/Downloads/pennant_china_scans_v2/", pennant_annotations$FILE[row]))
+#   
+#   
+#   offset = as.numeric(str_extract(pennant_annotations$ANCHOR[row], "[0-9]{1,}"))
+#   
+#   text_vec[row] = substr(text, (offset-100), (offset+100))
+#   
+# }
 
-for(row in 1:nrow(pennant_annotations)){
-  
-  text = read_file(paste0("/Users/yannryan/Downloads/pennant_china_scans_v2/", pennant_annotations$FILE[row]))
-  
-  
-  offset = as.numeric(str_extract(pennant_annotations$ANCHOR[row], "[0-9]{1,}"))
-  
-  text_vec[row] = substr(text, (offset-100), (offset+100))
-  
-}
 
-pennant_annotations = pennant_annotations %>%separate(COMMENTS, into = c('X1', 'info'), sep = '\\| ')
+pennant_translations = googlesheets4::read_sheet('https://docs.google.com/spreadsheets/d/1RYrHV2ytY4iHZDQLofFr9jaEF40tl8gIQBF8XdQc5G0/edit?usp=sharing')
 
-pennant_full_sf = pennant_annotations %>% 
-  filter(!is.na(LAT)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) 
+pennant_annotations = pennant_annotations %>% 
+  separate(COMMENTS, into = c('X1', 'info'), sep = '\\| ') %>% 
+  mutate(pages = as.numeric(str_extract(FILE, "[0-9]{3}"))) %>% 
+  mutate(pages = pages + 86) 
 
-pennant_full_sf = pennant_full_sf %>% st_set_crs(4326)
 
 china_prov = ne_download_e(scale = 10, type = 'admin_1_states_provinces', returnclass = 'sf')
 
 china_prov = china_prov %>% filter(admin == 'China')
 
-all_provinces = pennant_annotations %>% filter(!is.na(TYPE)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
+all_provinces = pennant_annotations %>% 
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>% 
   inner_join(china_prov, by = c('VOCAB_LABEL'  = 'name')) %>% 
-  sf::st_as_sf() %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) %>%  
+  sf::st_as_sf() 
 
 all_countries = ne_countries(scale = 10, returnclass = 'sf')
 
-all_countries_sf = pennant_annotations %>% filter(!is.na(TYPE)) %>% distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
- # mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>"))%>% distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
-  inner_join(all_countries, by = c('VOCAB_LABEL'  = 'name')) %>% sf::st_as_sf() %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) 
+all_countries_sf = pennant_annotations %>% 
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>% 
+  inner_join(all_countries, by = c('VOCAB_LABEL'  = 'name')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos))    %>%  
+  sf::st_as_sf()
 
 all_countries_sf = all_countries_sf %>% st_set_crs(4326)
 
-pennant_full_sf  = pennant_full_sf %>% filter(!UUID %in% c(all_countries_sf$UUID, all_provinces$UUID))
+
+pennant_full_sf = pennant_annotations %>% 
+  filter(!is.na(LAT)) %>% 
+  group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
+
+pennant_full_sf = pennant_full_sf %>% st_set_crs(4326)
+
+
+#pennant_full_sf  = pennant_full_sf %>% filter(!UUID %in% c(all_countries_sf$UUID, all_provinces$UUID))
 
 l = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik) %>% setView(50, 30, zoom = 2) %>% 
   addPolygons(data = all_countries_sf, popup = ~info, fillColor = 'lightblue', color = 'black', weight = 2, group = 'Gwledydd') %>% 
   addPolygons(data = all_provinces,  popup = ~info, fillColor = 'forestgreen', color = 'black', weight = 2, group = 'Taleithiau')  %>% 
   addCircleMarkers(data = pennant_full_sf, label = ~VOCAB_LABEL,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9', group = 'Lleoliadau (dinasoedd)') %>%
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe', group = 'Lleoliadau (dinasoedd)') %>%
   # Layers control
   addLayersControl(
     overlayGroups = c('Gwledydd', 'Taleithiau', 'Lleoliadau (dinasoedd)'),
@@ -77,23 +109,29 @@ xavier = pennant_annotations %>% filter(str_detect(TAGS, "journey_francisdexavie
 
 xavier = xavier %>% 
   mutate(extra_coords = str_extract(X1, "([-+]?\\d{1,2}[.]\\d+),\\s*([-+]?\\d{1,3}[.]\\d+)")) %>% 
-  separate(extra_coords, into = c('LAT2', 'LNG2'), sep = ',') %>% mutate(LAT2 = as.numeric(LAT2)) %>% 
+  separate(extra_coords, into = c('LAT2', 'LNG2'), sep = ',') %>% 
+  mutate(LAT2 = as.numeric(LAT2)) %>% 
   mutate(LNG2 = as.numeric(LNG2)) %>% 
   mutate(LAT = coalesce(LAT, LAT2))%>% 
   mutate(LNG = coalesce(LNG, LNG2))
 
 xavier_sf = xavier %>% 
-  filter(!is.na(LAT)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context)) %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) %>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
 
 xavier_leaflet = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik)  %>% 
   addCircleMarkers(data = xavier_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9')
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe')
 
 save(xavier_leaflet, file = 'xavier_leaflet')
 
@@ -106,18 +144,23 @@ polo = polo %>%
   mutate(LAT = coalesce(LAT, LAT2))%>% 
   mutate(LNG = coalesce(LNG, LNG2))
 
-polo_sf = polo %>% 
-  filter(!is.na(LAT)) %>% 
- # mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context)) %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) %>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
+polo_sf = polo%>% 
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
 
 polo_leaflet = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik)  %>% 
   addCircleMarkers(data = polo_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9')
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe')
 
 save(polo_leaflet, file = 'polo_leaflet')
 
@@ -132,17 +175,22 @@ ricci = ricci %>%
   mutate(LNG = coalesce(LNG, LNG2))
 
 ricci_sf = ricci %>% 
-  filter(!is.na(LAT)) %>% 
- # mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context)) %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) %>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT'))%>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL)) %>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
 
 ricci_leaflet = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik)  %>% 
   addCircleMarkers(data = ricci_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9')
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe')
 
 save(ricci_leaflet, file = 'ricci_leaflet')
 
@@ -157,27 +205,33 @@ andrade = andrade %>%
   mutate(LNG = coalesce(LNG, LNG2))
 
 andrade_sf = andrade %>% 
-  filter(!is.na(LAT)) %>% 
- # mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context))  %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info)) %>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
 
 andrade_leaflet = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik)  %>% 
   addCircleMarkers(data = andrade_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9')
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe')
 
 save(andrade_leaflet, file = 'andrade_leaflet')
 
 n = sf::st_read('/Users/yannryan/Downloads/Taith_Johan_Nieuhof_yn_Tsieina.geojson')
 
-
 n = n %>% filter(name != '') %>% 
   filter(id != 'ce232e50-3f5d-4c29-86f5-29e82cc98966') %>% 
   left_join(pennant_annotations, by = c('name' = 'UUID')) %>% 
-  mutate(for_popup = paste0("<b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Authority file: </b><a href='", URI,"'>",VOCAB_LABEL, "</a><br><b>Info: </b>", info))
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL)) %>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info))
 
 n_uncertain = n %>% filter(str_detect(X1, "_ansicr"))
 
@@ -186,9 +240,9 @@ n_certain = n %>% filter(!str_detect(X1, "_ansicr"))
 nieuhof_leaflet = leaflet() %>%
   addTiles( 
     group='Historic Map', urlTemplate = 'https://maps.georeferencer.com/georeferences/498f6114-6109-50ff-a476-b6ce9a340c06/2019-10-08T11:46:44.143428Z/map/{z}/{x}/{y}.png?key=mp8Uneu8RsMxOKqs5e9C')  %>% 
-  addCircleMarkers(data = n_uncertain, label = ~QUOTE_TRANSCRIPTION, popup = ~for_popup,
+  addCircleMarkers(data = n_uncertain, label = ~QUOTE_TRANSCRIPTION, popup = ~info,
                    radius = 7, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = 'red') %>% 
-  addCircleMarkers(data = n_certain, label = ~QUOTE_TRANSCRIPTION, popup = ~for_popup,
+  addCircleMarkers(data = n_certain, label = ~QUOTE_TRANSCRIPTION, popup = ~info,
                    radius = 7, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = 'blue')
 
 
@@ -205,12 +259,17 @@ pennant_coastal = pennant_coastal %>%
   mutate(LNG = coalesce(LNG, LNG2))
 
 pennant_coastal_sf = pennant_coastal %>% 
-  filter(!is.na(LAT)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context))  %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info))%>%
-  sf::st_as_sf(coords = c('LNG', 'LAT'))
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE)) %>%  
+  sf::st_as_sf(coords = c('LNG', 'LAT')) %>% 
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos)) 
 
 
 china_prov = rnaturalearth::ne_states(returnclass = 'sf')
@@ -221,28 +280,32 @@ china_prov = china_prov %>% st_transform(4326)
 
 pennant_provinces = pennant_coastal %>% 
   filter(str_detect(TAGS, "province")) %>% 
-  distinct(VOCAB_LABEL, .keep_all = TRUE) %>% 
+  filter(!is.na(LAT)) %>% group_by(VOCAB_LABEL) %>% 
+  summarise(VOCAB_LABEL = max(VOCAB_LABEL, na.rm = T), 
+            LAT = max(LAT, na.rm = T), 
+            LNG = max(LNG, na.rm = T), 
+            names = paste5(unique(QUOTE_TRANSCRIPTION),collapse = '; ',na.rm=TRUE), 
+            page_nos = paste5(unique(pages), collapse = ', ',na.rm=TRUE),
+            infos = paste5(unique(info), collapse = ';',na.rm=TRUE))  %>% 
   left_join(china_prov, by = c('VOCAB_LABEL'  = 'name')) %>% 
-  filter(!is.na(LAT)) %>% 
-  #mutate(context = ifelse(!is.na(TYPE), str_replace(context, QUOTE_TRANSCRIPTION, paste0("<b>", QUOTE_TRANSCRIPTION, "</b>")), context))  %>%
-  #mutate(context = paste0("<i>...", context, "...</i>")) %>% 
-  #mutate(context = paste0("<b>Place: </b>", VOCAB_LABEL, "<br><br><b>Name in text: </b>", QUOTE_TRANSCRIPTION, "<br><b>Context: </b>", context))  %>% 
-  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", QUOTE_TRANSCRIPTION, "<br><b>Gwybodaeth: </b>", info))%>%
+  left_join(pennant_translations) %>% 
+  mutate(VOCAB_LABEL = coalesce(TRANSLATION, VOCAB_LABEL))%>% 
+  mutate(info = paste0("<b>Lleoliad: </b>", VOCAB_LABEL, "<br><b>Enw yn y testun: </b>", names, "<br><b>Gwybodaeth: </b>", infos, "<br><b>Page number(s): </b>", page_nos))  %>% 
   sf::st_as_sf()
 
-china_rivers2 = st_read('/Users/yannryan/Downloads/dataverse_files (1)/v6_1820_coded_rvr_lin_utf/v6_1820_coded_rvr_lin_utf.shp')
-
-china_rivers2 = china_rivers2 %>% st_transform(4326)
-
-china_rivers = ne_download_e(scale = 10, type = 'rivers_lake_centerlines', returnclass = 'sf', category = 'physical')
-
-china_lakes = ne_download_e(scale = 10, type = 'lakes', returnclass = 'sf', category = 'physical')
-
-china_lakes2 = st_read('/Users/yannryan/Downloads/dataverse_files (1)/v6_1820_lks_pgn_utf/v6_1820_lks_pgn_utf.shp')
-
-china_lakes2 = china_lakes2 %>% st_transform(4326)
-
-pennant_lakes1 = china_lakes2 %>% filter(LKS_ID %in% c(148))
+# china_rivers2 = st_read('/Users/yannryan/Downloads/dataverse_files (1)/v6_1820_coded_rvr_lin_utf/v6_1820_coded_rvr_lin_utf.shp')
+# 
+# china_rivers2 = china_rivers2 %>% st_transform(4326)
+# 
+# china_rivers = ne_download_e(scale = 10, type = 'rivers_lake_centerlines', returnclass = 'sf', category = 'physical')
+# 
+# china_lakes = ne_download_e(scale = 10, type = 'lakes', returnclass = 'sf', category = 'physical')
+# 
+# china_lakes2 = st_read('/Users/yannryan/Downloads/dataverse_files (1)/v6_1820_lks_pgn_utf/v6_1820_lks_pgn_utf.shp')
+# 
+# china_lakes2 = china_lakes2 %>% st_transform(4326)
+# 
+# pennant_lakes1 = china_lakes2 %>% filter(LKS_ID %in% c(148))
 
 pennant_rivers1 = china_rivers %>% filter(ne_id %in% c('1159128895', '1159123967')) %>% select(name)
 
@@ -254,7 +317,7 @@ pennant_coastal_leaflet = leaflet() %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik)  %>% 
   addPolygons(data = pennant_provinces, popup = ~info, fillColor = 'forestgreen', color = 'black', weight = 2) %>% 
   addCircleMarkers(data = pennant_coastal_sf,  popup =~info ,
-                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#d9d9d9') %>% 
+                   radius = 5, weight = 1, opacity = 1, fillOpacity = .9, color = 'black', fillColor = '#bd7ebe') %>% 
   addPolylines(data = all_pennant_rivers) %>% addPolygons(data = pennant_lakes1)
 
 save(pennant_coastal_leaflet, file = 'pennant_coastal_leaflet')

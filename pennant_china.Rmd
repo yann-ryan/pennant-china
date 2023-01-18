@@ -189,9 +189,9 @@ Cliff, Nigel, 'Introduction', yn *Marco Polo: The Travels*, cyfieithwyd
 gan Nigel Cliff (Penguin, 2015), tt. xi--xlii, yn enw. xiii, xv, xxvi
 
 Forster, Johann Reinhold, *History of the voyages and discoveries made
-in the north*. Translated from the German of John Reinhold Forster,
+in the north. Translated from the German of John Reinhold Forster,
 I.U.D. and elucidated by a new and original map of the countries
-situated about the North Pole (London, 1786), tt. 117--147, gyda
+situated about the North Pole* (London, 1786), tt. 117--147, gyda
 dyfyniad ar t. 142n
 
 Osterhamel, *Jürgen*, cyfieithwyd gan Robert Savage (Princeton, New
@@ -204,13 +204,13 @@ Purchas, Samuel, *Hakluytus Posthumus or, Purchas his Pilgrimes:
 Contayning a History of the World in Sea Voyages and Lande Travells by
 Englishmen and Others* (1625; Cambridge, 2014)
 
-Bergeron, Pierre de, *Voyages faits principalement en Asie*, dans les
+Bergeron, Pierre de, *Voyages faits principalement en Asie, dans les
 XII, XIII, XIV et XV siècles, par Benjamin de Tudèle, Jean Du
 Plan-Carpin, M. Ascelin, Guillaume de Rubruquis, Marc-Paul vénitien,
 Haiton, Jean de Mandeville et Ambroise Contarini, accompagnés de
 l'histoire des Sarrazins et des Tartares et précédés d'une introduction
 concernant les voyages et les nouvelles découvertes des principaux
-voyageurs, 2 gyf. (La Haye, 1735)
+voyageurs*, 2 gyf. (La Haye, 1735)
 
 # Fernäo Pires de Andrade
 
@@ -308,7 +308,7 @@ ac, fel y gweddai i ŵr crefyddol, gwarchodwyd ei gorff yn ddi-nam yn ei
 arch am hanner can mlynedd. Fe'i dygwyd i Goa bryd hynny i'w anrhydeddu.
 
 Y mae'r hyn a ymddangosodd yn un o'r cyfrolau o 'Outlines of the Globe'
-Pennant a gyhoeddwyd yn 1798, The View of Hindoostan, yn ailadrodd
+Pennant a gyhoeddwyd yn 1798, *The View of Hindoostan*, yn ailadrodd
 llawer o'r wybodaeth hon ynghylch Xavier, gan flodeuo ychydig arni.
 Clywn yno am enedigaeth Xavier yn y castell y cymerodd ei enw oddi
 wrtho, castell Xavier ger droed mynyddoedd y Pyrénées, ac am ei
@@ -354,8 +354,8 @@ in the affairs of the universe').
 ### **Cyfeiriadau a darllen pellach:**
 
 Osorio, Jerome, *The history of the Portuguese, during the reign of
-Emmanuel*: ... Written originally in Latin by Jerome Osorio, ... Now
-first translated into English by James Gibbs, 2 gyf. (London, 1752), I,
+Emmanuel: ... Written originally in Latin by Jerome Osorio, ... Now
+first translated into English by James Gibbs*, 2 gyf. (London, 1752), I,
 tt. 212--13
 
 Pennant, Thomas, *The View of Hindoostan*, 2 gyf. (London, 1798), I, tt.
@@ -407,9 +407,9 @@ ohebiaeth printiedig a llythyrau blynyddol a anfonai ef a chenhadon
 eraill gartref, ac a gyhoeddid mewn canolfannau amlwg yn yr Eidal a thu
 hwnt. Yn fwy allweddol byth, yn 1615, ymddangosodd dyddiadur Ricci
 ynghylch y genhadaeth i Tsieina o'r wasg, wedi'i baratoi gan ei
-gyd-Jeswit Nicolas Trigault (1577--1628). Nod Trigault yn De Christiana
-expeditione apud Sinas suscepta ab Societate Jesu (Ynghylch alltaith
-Gristnogol Cymdeithas yr Iesu i blith y Tsieineaid) oedd sicrhau
+gyd-Jeswit Nicolas Trigault (1577--1628). Nod Trigault yn *De Christiana
+expeditione apud Sinas suscepta ab Societate Jesu* (*Ynghylch alltaith
+Gristnogol Cymdeithas yr Iesu i blith y Tsieineaid*) oedd sicrhau
 annibynniaeth y genhadaeth i Tsieina a'i hyfywedd ar gyfer y dyfodol, a
 chreodd o gofnodion Ricci waith hagiograffaidd a ddarluniai lwyddiant y
 Jeswitiaid i 'fachu' pobl Tsieina i gorlan Cristnogaeth. Diogelwyd enw
@@ -451,13 +451,13 @@ nieuhof_leaflet
 
 Adroddodd Pennant gyda chryn fanylder lwybr taith Johan Nieuhof, fel rhan o lysgenhadaeth o'r Iseldiroedd i Tsieina rhwng 1655 ac 1657. Dilynodd gynnwrf y daith o'i dechreuad, pan ffarweliwyd â'r llysgenhadon yn frwd gan drigolion Canton (Guangzhou), a gyrru swyddogion o'u blaenau i sicrhau eu derbyniad ar bob cam o'r daith nes iddynt gyrraedd Peking (Beijing). Yr oedd y croeso yno yr un mor dwymgalon, ond er gwaethaf y parch ymddangosiadol, meddai Pennant, fe'u gyrrwyd ymaith ar eu taith heb wireddu eu hamcanion. Gan ddefnyddio darluniau a gyhoeddwyd o daith Nieuhof, rhoddodd Pennant ddarlun llawn o adeiladau rhyfeddol, nodweddion naturiol syfrdanol, effeithiau rhyfel a choncwest, creaduriaid byd natur, a phobloedd amrywiol Tsieina, oll fel y'u portreadwyd gan yr Iseldirwr a gyda'i agweddau ef ei hun yn ymwthio i'w ddadansoddiadau (gw. ysgrif, 'Lôn sidan o syniadau sydd yn gweu / (heb chwys na swigod traed i flino'i hynt)': Thomas Pennant yn Tsieina', adran (vi) Johan Nieuhof a'r daith o Guangzhou (Canton) i Beijing).
 
-Cyfeiriodd Pennant at gyfieithiad Lladin gan yr hanesydd a'r daearyddwr Georgius Hornius (Georg Horn; 1620–70) o daith Nieuhof, Het gezantschap der Neêrlandtsche Oost-Indische Compagnie, aan den grooten Tartarischen Cham, den tegenwoordige keizer van China (1665), ond yr oedd cyfieithiadau Saesneg John Ogilby (1600–76), a argraffwyd yn 1669 ac 1673, hefyd ar gael iddo. Ymddengys iddo ddibynnu cryn dipyn ar waith y Sais wrth lunio fersiwn wreiddiol ei adroddiad ar Tsieina, y fersiwn ddarluniedig a gedwir yn awr fel rhan o 'Outlines of the Globe' Pennant yn yr Amgueddfa Forwrol Genedlaethol (gw. ymhellach Atodiad Delweddau). Y mae canfod lleoliadau daearyddol yr enwau a ddefnyddiwyd gan Nieuhof a'i argraffwyr diweddarach yn her sylweddol wrth fapio'r daith hon. Bu cyfrol Friederike Ulrichs ynghylch taith Nieuhof yn gymorth mewn mannau i ganfod enwau cyfredol. Yr oedd modd hefyd fapio'r lleoliadau a ddisgrifiwyd gan Pennant yn erbyn map hanesyddol o'r daith, a map felly, o waith yr argraffwr a'r cyhoeddwr o Leiden yn yr Iseldiroedd, Pieter van der Aa (1659–1733), yw sail yr hyn a gyflwynir yma. Ffrangeg yw teitl y map hwn, a cheir rhai enwau yn yr iaith honno arno. Y mae nifer o gyfatebiaethau â'r hyn a gyflwynodd Pennant, serch hynny, a nodwyd y rhain, ynghyd â lleoliadau daearyddol modern pan oedd hynny'n bosibl.
+Cyfeiriodd Pennant at gyfieithiad Lladin gan yr hanesydd a'r daearyddwr Georgius Hornius (Georg Horn; 1620–70) o daith Nieuhof, *Het gezantschap der Neêrlandtsche Oost-Indische Compagnie, aan den grooten Tartarischen Cham, den tegenwoordige keizer van China* (1665), ond yr oedd cyfieithiadau Saesneg John Ogilby (1600–76), a argraffwyd yn 1669 ac 1673, hefyd ar gael iddo. Ymddengys iddo ddibynnu cryn dipyn ar waith y Sais wrth lunio fersiwn wreiddiol ei adroddiad ar Tsieina, y fersiwn ddarluniedig a gedwir yn awr fel rhan o 'Outlines of the Globe' Pennant yn yr Amgueddfa Forwrol Genedlaethol (gw. ymhellach Atodiad Delweddau). Y mae canfod lleoliadau daearyddol yr enwau a ddefnyddiwyd gan Nieuhof a'i argraffwyr diweddarach yn her sylweddol wrth fapio'r daith hon. Bu cyfrol Friederike Ulrichs ynghylch taith Nieuhof yn gymorth mewn mannau i ganfod enwau cyfredol. Yr oedd modd hefyd fapio'r lleoliadau a ddisgrifiwyd gan Pennant yn erbyn map hanesyddol o'r daith, a map felly, o waith yr argraffwr a'r cyhoeddwr o Leiden yn yr Iseldiroedd, Pieter van der Aa (1659–1733), yw sail yr hyn a gyflwynir yma. Ffrangeg yw teitl y map hwn, a cheir rhai enwau yn yr iaith honno arno. Y mae nifer o gyfatebiaethau â'r hyn a gyflwynodd Pennant, serch hynny, a nodwyd y rhain, ynghyd â lleoliadau daearyddol modern pan oedd hynny'n bosibl.
 
 
 
 ### **Cyfeiriad a darllen pellach:**  
 
-Vander Aa, Pierre, Carte exacte de toutes les provinces, villes, bourgs, villages et rivieeres du vaste et puissant empire de la Chine, faite par les ambassadeurs hollandois dans leur voyage de Batavia à Peking. dressee par Jean Nieuhof (Leiden, 1728), ar <https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297075~90068752:1--Chine-carte;JSESSIONID=1cf8541d-4618-44b5-bba2-605c2fe015b4?qvq=q%3ANieuhof%3Bsort%3APub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No%3Blc%3ARUMSEY%7E8%7E1&sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=0&trs=57>  
+Vander Aa, Pierre, *Carte exacte de toutes les provinces, villes, bourgs, villages et rivieeres du vaste et puissant empire de la Chine, faite par les ambassadeurs hollandois dans leur voyage de Batavia à Peking. dressee par Jean Nieuhof* (Leiden, 1728), ar <https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297075~90068752:1--Chine-carte;JSESSIONID=1cf8541d-4618-44b5-bba2-605c2fe015b4?qvq=q%3ANieuhof%3Bsort%3APub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No%3Blc%3ARUMSEY%7E8%7E1&sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=0&trs=57>  
 
 Dienw, Pieter van der Aa, ar <https://www.britishmuseum.org/collection/term/BIOG178415> [cyrchwyd 4 Ionawr 2023]  
 
@@ -470,7 +470,7 @@ idem, *The View of India Extra Gangem, China and Japan*, gol. gan David Pennant 
 Ulrichs, Friederike, *Johan Nieuhofs Blick auf China (1655–1657) Die Kupferstiche in seinem Chinabuch und ihre Wirkung auf den Verleger Jacob van Meurs* (Wiesbaden, 2003)  
 
 
-# Taith arfordirol ddychmygol Pennant
+# Taith arfordirol Pennant
 
 ## Column {data-width="650"}
 
@@ -499,6 +499,7 @@ A. R. H., 'The Romanization of Chinese Place-Names', *The Geographical Journal*,
 Cunningham, James, 'Part of two letters to the publisher from Mr James Cunningham, F. R. S. and Physician to the English at Chusan in China, giving an account of his voyage thither, of the Island of Chusan, of the several sorts of tea, of the fishing, agriculture of the Chinese, &c. with several observations not hitherto taken notice of', yn *Philosophical Transactions of the Royal Society of London*, cyf. 23, rhif 280, ar <https://doi.org/10.1098/rstl.1702.0023> [cyrchwyd 22 Rhagfyr 2022]  
 
 de Ven, Hans J. van, 'Wade, Sir Thomas Francis (1818–1895), yn *ODNB*, ar <https://doi.org/10.1093/ref:odnb/28382> [cyrchwyd 20 Rhagfyr 2022]  
+
 Dienw, 'Chinese Romanization Converter', ar <http://www.mandarintools.com/pyconverter.html> [cyrchwyd 21 Rhagfyr 2022]  
 
 Dienw, 'Wade-Giles', yn *New World Encyclopedia*, ar <https://www.newworldencyclopedia.org/entry/Wade-Giles#cite_note-2> [cyrchwyd 20 Rhagfyr 2022]  
