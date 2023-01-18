@@ -12,33 +12,97 @@ editor_options:
     wrap: 72
 ---
 
-# Map cyflawn
+# Introduction
 
-```{r setup, include=FALSE}
-library(flexdashboard)
-library(leaflet)
+::: floatting
+```{r out.width='40%', out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics('Picture 3.jpg')
 ```
 
-## Column {data-width="650"}
+## Mapio Pennant yn Tsieina
 
-### Map
+<font size="3">  
 
-```{r}
-load('l')
-l
+Welcome to the website dedicated to the life and work of Thomas Pennant,
+a pioneering Welsh naturalist, traveller, writer, and antiquarian of the
+18th century. On this site, you will find a wealth of information about
+Pennant and his most famous work, "A Tour in China," which chronicled
+his journey through the country and its natural wonders. Additionally,
+we have created a number of interactive maps that allow you to explore
+the locations he visited and the observations he made, bringing his book
+to life in a new and engaging way. This intro is written by ChatGPT and
+hope you enjoy exploring the life and work of this remarkable figure.  
+
+
+
+Thomas Pennant was born on June 14th, 1726, and spent his life exploring
+and documenting the natural world around him. He was particularly
+interested in ornithology, and his book "British Zoology" was considered
+a classic in the field. However, it was his journey to China in the late
+1700s that cemented his place in history as a pioneering naturalist and
+traveler. During his trip, Pennant documented the plants, animals, and
+landscapes he encountered, as well as the customs and traditions of the
+Chinese people. His book, "A Tour in China," was published in 1796 and
+is still considered an important primary source for historians and
+naturalists alike.
+
+:::
+
+
+On this website, we have brought together a wealth of information about
+Thomas Pennant and his journey to China, including interactive maps,
+images, and quotes from his book. We hope that this website will help
+you to discover the life and legacy of this fascinating figure and
+inspire you to learn more about the natural world and the history of
+travel.
+
+In addition to the interactive maps, we also have a section dedicated to
+showcasing some of the illustrations from "A Tour in China," which were
+created by the renowned artist Moses Griffith. These illustrations
+provide a visual representation of the plants, animals, and landscapes
+that Pennant encountered during his journey and give a sense of the
+level of detail he included in his book.
+
+
+
+:::floatting  
+
+```{r out.width='40%', out.extra='style="float:left; padding:10px"'}
+
+knitr::include_graphics('Picture 2.jpg')
 ```
 
-## Column {data-width="350"}
+We also have a section dedicated to highlighting some of the most
+interesting and noteworthy observations made by Pennant during his
+journey. These include his encounters with exotic animals such as the
+panda and his descriptions of the Great Wall of China and other iconic
+landmarks.
 
-### **Cyflwyniad**
+Finally, we have also included information about the historical context
+of Pennant's journey to China, including the political and economic
+climate of the time, as well as the general state of European
+exploration and knowledge of China.
 
-We could add information on the journeys here for example.
 
-```{r}
+In summary, this website is dedicated to providing a comprehensive and
+engaging look at the life and work of Thomas Pennant, and we hope that
+it will inspire visitors to learn more about this pioneering naturalist
+and traveler.
 
-```
+:::  
 
-### Methodoleg
+</font>
+
+<font size="4">  <b>
+
+Methodology  
+
+</b>
+
+</font>
+
+<font size="3">  
 
 Y man cychwyn yn y broses o lunio'r mapiau niferus a welir yn yr adnodd
 hwn -- o'r map cyflawn o'r byd hyd at fapiau siwrneiau teithwyr unigol
@@ -89,6 +153,53 @@ hofran a chlicio uwch yr enwau a farciwyd ar y map, gellir gweld yr enw
 yn nhestun Pennant, sydd yn cyfateb yn bur agos i enwau'r map
 hanesyddol, ynghyd â gwybodaeth bellach yn trafod unrhyw anawsterau ac
 yn cyd-destuoli'r wybodaeth.
+
+</font>
+
+<font size="4">  <b>
+
+Credits    
+
+</b>
+
+</font>
+
+
+<font size="3">  
+
+Credits here
+
+</font>
+
+# Map cyflawn
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(leaflet)
+```
+
+## Column {data-width="650"}
+
+### Map
+
+```{r}
+load('l')
+l
+```
+
+## Column {data-width="350"}
+
+### **Cyflwyniad**
+
+We could add information on the journeys here for example.
+
+```{r}
+
+```
+
+### Methodoleg
+
+
 
 # Marco Polo
 
@@ -449,26 +560,67 @@ nieuhof_leaflet
 
 ### **Cyflwyniad**
 
-Adroddodd Pennant gyda chryn fanylder lwybr taith Johan Nieuhof, fel rhan o lysgenhadaeth o'r Iseldiroedd i Tsieina rhwng 1655 ac 1657. Dilynodd gynnwrf y daith o'i dechreuad, pan ffarweliwyd â'r llysgenhadon yn frwd gan drigolion Canton (Guangzhou), a gyrru swyddogion o'u blaenau i sicrhau eu derbyniad ar bob cam o'r daith nes iddynt gyrraedd Peking (Beijing). Yr oedd y croeso yno yr un mor dwymgalon, ond er gwaethaf y parch ymddangosiadol, meddai Pennant, fe'u gyrrwyd ymaith ar eu taith heb wireddu eu hamcanion. Gan ddefnyddio darluniau a gyhoeddwyd o daith Nieuhof, rhoddodd Pennant ddarlun llawn o adeiladau rhyfeddol, nodweddion naturiol syfrdanol, effeithiau rhyfel a choncwest, creaduriaid byd natur, a phobloedd amrywiol Tsieina, oll fel y'u portreadwyd gan yr Iseldirwr a gyda'i agweddau ef ei hun yn ymwthio i'w ddadansoddiadau (gw. ysgrif, 'Lôn sidan o syniadau sydd yn gweu / (heb chwys na swigod traed i flino'i hynt)': Thomas Pennant yn Tsieina', adran (vi) Johan Nieuhof a'r daith o Guangzhou (Canton) i Beijing).
+Adroddodd Pennant gyda chryn fanylder lwybr taith Johan Nieuhof, fel
+rhan o lysgenhadaeth o'r Iseldiroedd i Tsieina rhwng 1655 ac 1657.
+Dilynodd gynnwrf y daith o'i dechreuad, pan ffarweliwyd â'r llysgenhadon
+yn frwd gan drigolion Canton (Guangzhou), a gyrru swyddogion o'u blaenau
+i sicrhau eu derbyniad ar bob cam o'r daith nes iddynt gyrraedd Peking
+(Beijing). Yr oedd y croeso yno yr un mor dwymgalon, ond er gwaethaf y
+parch ymddangosiadol, meddai Pennant, fe'u gyrrwyd ymaith ar eu taith
+heb wireddu eu hamcanion. Gan ddefnyddio darluniau a gyhoeddwyd o daith
+Nieuhof, rhoddodd Pennant ddarlun llawn o adeiladau rhyfeddol,
+nodweddion naturiol syfrdanol, effeithiau rhyfel a choncwest,
+creaduriaid byd natur, a phobloedd amrywiol Tsieina, oll fel y'u
+portreadwyd gan yr Iseldirwr a gyda'i agweddau ef ei hun yn ymwthio i'w
+ddadansoddiadau (gw. ysgrif, 'Lôn sidan o syniadau sydd yn gweu / (heb
+chwys na swigod traed i flino'i hynt)': Thomas Pennant yn Tsieina',
+adran (vi) Johan Nieuhof a'r daith o Guangzhou (Canton) i Beijing).
 
-Cyfeiriodd Pennant at gyfieithiad Lladin gan yr hanesydd a'r daearyddwr Georgius Hornius (Georg Horn; 1620–70) o daith Nieuhof, *Het gezantschap der Neêrlandtsche Oost-Indische Compagnie, aan den grooten Tartarischen Cham, den tegenwoordige keizer van China* (1665), ond yr oedd cyfieithiadau Saesneg John Ogilby (1600–76), a argraffwyd yn 1669 ac 1673, hefyd ar gael iddo. Ymddengys iddo ddibynnu cryn dipyn ar waith y Sais wrth lunio fersiwn wreiddiol ei adroddiad ar Tsieina, y fersiwn ddarluniedig a gedwir yn awr fel rhan o 'Outlines of the Globe' Pennant yn yr Amgueddfa Forwrol Genedlaethol (gw. ymhellach Atodiad Delweddau). Y mae canfod lleoliadau daearyddol yr enwau a ddefnyddiwyd gan Nieuhof a'i argraffwyr diweddarach yn her sylweddol wrth fapio'r daith hon. Bu cyfrol Friederike Ulrichs ynghylch taith Nieuhof yn gymorth mewn mannau i ganfod enwau cyfredol. Yr oedd modd hefyd fapio'r lleoliadau a ddisgrifiwyd gan Pennant yn erbyn map hanesyddol o'r daith, a map felly, o waith yr argraffwr a'r cyhoeddwr o Leiden yn yr Iseldiroedd, Pieter van der Aa (1659–1733), yw sail yr hyn a gyflwynir yma. Ffrangeg yw teitl y map hwn, a cheir rhai enwau yn yr iaith honno arno. Y mae nifer o gyfatebiaethau â'r hyn a gyflwynodd Pennant, serch hynny, a nodwyd y rhain, ynghyd â lleoliadau daearyddol modern pan oedd hynny'n bosibl.
+Cyfeiriodd Pennant at gyfieithiad Lladin gan yr hanesydd a'r daearyddwr
+Georgius Hornius (Georg Horn; 1620--70) o daith Nieuhof, *Het
+gezantschap der Neêrlandtsche Oost-Indische Compagnie, aan den grooten
+Tartarischen Cham, den tegenwoordige keizer van China* (1665), ond yr
+oedd cyfieithiadau Saesneg John Ogilby (1600--76), a argraffwyd yn 1669
+ac 1673, hefyd ar gael iddo. Ymddengys iddo ddibynnu cryn dipyn ar waith
+y Sais wrth lunio fersiwn wreiddiol ei adroddiad ar Tsieina, y fersiwn
+ddarluniedig a gedwir yn awr fel rhan o 'Outlines of the Globe' Pennant
+yn yr Amgueddfa Forwrol Genedlaethol (gw. ymhellach Atodiad Delweddau).
+Y mae canfod lleoliadau daearyddol yr enwau a ddefnyddiwyd gan Nieuhof
+a'i argraffwyr diweddarach yn her sylweddol wrth fapio'r daith hon. Bu
+cyfrol Friederike Ulrichs ynghylch taith Nieuhof yn gymorth mewn mannau
+i ganfod enwau cyfredol. Yr oedd modd hefyd fapio'r lleoliadau a
+ddisgrifiwyd gan Pennant yn erbyn map hanesyddol o'r daith, a map felly,
+o waith yr argraffwr a'r cyhoeddwr o Leiden yn yr Iseldiroedd, Pieter
+van der Aa (1659--1733), yw sail yr hyn a gyflwynir yma. Ffrangeg yw
+teitl y map hwn, a cheir rhai enwau yn yr iaith honno arno. Y mae nifer
+o gyfatebiaethau â'r hyn a gyflwynodd Pennant, serch hynny, a nodwyd y
+rhain, ynghyd â lleoliadau daearyddol modern pan oedd hynny'n bosibl.
 
+### **Cyfeiriad a darllen pellach:**
 
+Vander Aa, Pierre, *Carte exacte de toutes les provinces, villes,
+bourgs, villages et rivieeres du vaste et puissant empire de la Chine,
+faite par les ambassadeurs hollandois dans leur voyage de Batavia à
+Peking. dressee par Jean Nieuhof* (Leiden, 1728), ar
+<https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297075~90068752:1--Chine-carte;JSESSIONID=1cf8541d-4618-44b5-bba2-605c2fe015b4?qvq=q%3ANieuhof%3Bsort%3APub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No%3Blc%3ARUMSEY%7E8%7E1&sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=0&trs=57>
 
-### **Cyfeiriad a darllen pellach:**  
+Dienw, Pieter van der Aa, ar
+<https://www.britishmuseum.org/collection/term/BIOG178415> [cyrchwyd 4
+Ionawr 2023]
 
-Vander Aa, Pierre, *Carte exacte de toutes les provinces, villes, bourgs, villages et rivieeres du vaste et puissant empire de la Chine, faite par les ambassadeurs hollandois dans leur voyage de Batavia à Peking. dressee par Jean Nieuhof* (Leiden, 1728), ar <https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297075~90068752:1--Chine-carte;JSESSIONID=1cf8541d-4618-44b5-bba2-605c2fe015b4?qvq=q%3ANieuhof%3Bsort%3APub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No%3Blc%3ARUMSEY%7E8%7E1&sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=0&trs=57>  
+Nieuhoff, John [sic], *An Embassy from the East-India Company of the
+United Provinces, to the Grand Tartar Cham Emperor of China*,
+cyfieithwyd gan John Ogilby, 2il arg. (London, 1673)
 
-Dienw, Pieter van der Aa, ar <https://www.britishmuseum.org/collection/term/BIOG178415> [cyrchwyd 4 Ionawr 2023]  
+Pennant, Thomas, 'China and Japan', yn yr Amgueddfa Forwrol
+Genedlaethol, P/16/17
 
-Nieuhoff, John [sic], *An Embassy from the East-India Company of the United Provinces, to the Grand Tartar Cham Emperor of China*, cyfieithwyd gan John Ogilby, 2il arg. (London, 1673)  
+idem, *The View of India Extra Gangem, China and Japan*, gol. gan David
+Pennant (London, 1800)
 
-Pennant, Thomas, 'China and Japan', yn yr Amgueddfa Forwrol Genedlaethol, P/16/17  
-
-idem, *The View of India Extra Gangem, China and Japan*, gol. gan David Pennant (London, 1800)  
-
-Ulrichs, Friederike, *Johan Nieuhofs Blick auf China (1655–1657) Die Kupferstiche in seinem Chinabuch und ihre Wirkung auf den Verleger Jacob van Meurs* (Wiesbaden, 2003)  
-
+Ulrichs, Friederike, *Johan Nieuhofs Blick auf China (1655--1657) Die
+Kupferstiche in seinem Chinabuch und ihre Wirkung auf den Verleger Jacob
+van Meurs* (Wiesbaden, 2003)
 
 # Taith arfordirol Pennant
 
@@ -485,33 +637,88 @@ pennant_coastal_leaflet
 
 ### **Cyflwyniad**
 
-Wedi dilyn taith fewndirol Johan Nieuhof, dychwelodd Pennant i Guangzhou (Canton) er mwyn teithio ar hyd yr arfordir o'r de i'r gogledd ('[to] pursue the topography of the coasts'), nod cwbl hanfodol yng nghyswllt y cyfanwaith y deilliai'r adroddiad o Tsieina ohono, 'Outlines of the Globe'. Nododd yn yr achos hwn mor gyfyngedig oedd gwybodaeth y Gorllewin o'r traethau a'r harbyrau hyn. Ychydig iawn a allai ei ddweud am ystod rhwng dwy a thair mil o'r arfordir, meddai, ond ei fod yn ymddangos yn arw ac yn llawn baeau, porthladdoedd, a morgeinciau ('bays, harbors, and creeks').
+Wedi dilyn taith fewndirol Johan Nieuhof, dychwelodd Pennant i Guangzhou
+(Canton) er mwyn teithio ar hyd yr arfordir o'r de i'r gogledd ('[to]
+pursue the topography of the coasts'), nod cwbl hanfodol yng nghyswllt y
+cyfanwaith y deilliai'r adroddiad o Tsieina ohono, 'Outlines of the
+Globe'. Nododd yn yr achos hwn mor gyfyngedig oedd gwybodaeth y
+Gorllewin o'r traethau a'r harbyrau hyn. Ychydig iawn a allai ei ddweud
+am ystod rhwng dwy a thair mil o'r arfordir, meddai, ond ei fod yn
+ymddangos yn arw ac yn llawn baeau, porthladdoedd, a morgeinciau ('bays,
+harbors, and creeks').
 
-Y mae'r adroddiad sy'n dilyn yn rhoi sylw i nodweddion daearyddol amrywiol, yn daleithiau, ynysoedd, afonydd, llynnoedd, a dinasoedd. Blasir cyd-destun Ewropeaidd cyswllt Pennant â'r lleoliadau hyn drwy gyfrwng yr enwau: dewiswyd enwau disgrifiadol Ewropeaidd ar Ynysoedd Ladrone; craig dâl wen 'Piedra Biancas'; a'r ynysoedd a enwir 'Asses ears', er enghraifft. Ar y cyfan, serch hynny, ymgeisiadau i gynrychioli seiniau arwyddnodau logograffig Tsieinëeg ar ffurf llythrennau Rhufeinig a welir yn yr enwau a ddefnyddir. Y gyntaf o ddwy system o Rufeinio'r iaith a ddaeth i fri yn ystod yr ugeinfed ganrif oedd system Wade-Giles, a grëwyd gan y llysgennad Prydeinig i Tsieina Thomas Francis Wade (1818–1895) a'i datblygu gan y sinolegydd Herbert Allen Giles (1845–1935). Mewn geiriadur Tseinëeg–Saesneg a gyhoeddodd Giles yn 1892 gwnaed camau breision er sefydlu ei system trawslythrennu ef a Wade fel safon ar gyfer Rhufeinio arwyddnodau Tseinëeg, gyda diwygiadau pellach yn 1912 gan Giles a'i fab Lionel (1875–1958). Yn ystod ail ddegawd yr ugeinfed ganrif, bu trafodaethau a datblygiadau hefyd ynghylch Rhufeinio enwau lleoedd, pan safonwyd enwau taleithiau, dinasoedd, a threfi ac, yn 1919 enwau mynyddoedd ac afonydd yn ogystal yn yr Atlas Post Tsieineaidd a gyhoeddwyd yn 1919. Safodd system Wade-Giles ei thir fel yr un safonol mewn llyfrau am Tsieina a gyhoeddwyd cyn 1979, pan gymerwyd ei lle i raddau helaeth gan Pinyin, system yn deillio o'r 1950au a fabwysiadwyd gan lywodraeth Tsieina yn 1958. Yn rhagflaenu'r ddwy system hon, fodd bynnag, yr oedd systemau lluosog o drawslythrennu. Nid yw o fewn cwmpas y gwaith presennol i olrhain seiliau'r systemau a ddefnyddiodd Pennant, ond gellir nodi cymhlethdod ac anhawster y gwaith o bennu pa leoliad a olygir oddi wrth enwau yn ei systemau Rhufeinio cynnar ef o'u cymharu ag enwau lleoedd mewn Pinyin cyfredol.
+Y mae'r adroddiad sy'n dilyn yn rhoi sylw i nodweddion daearyddol
+amrywiol, yn daleithiau, ynysoedd, afonydd, llynnoedd, a dinasoedd.
+Blasir cyd-destun Ewropeaidd cyswllt Pennant â'r lleoliadau hyn drwy
+gyfrwng yr enwau: dewiswyd enwau disgrifiadol Ewropeaidd ar Ynysoedd
+Ladrone; craig dâl wen 'Piedra Biancas'; a'r ynysoedd a enwir 'Asses
+ears', er enghraifft. Ar y cyfan, serch hynny, ymgeisiadau i gynrychioli
+seiniau arwyddnodau logograffig Tsieinëeg ar ffurf llythrennau Rhufeinig
+a welir yn yr enwau a ddefnyddir. Y gyntaf o ddwy system o Rufeinio'r
+iaith a ddaeth i fri yn ystod yr ugeinfed ganrif oedd system Wade-Giles,
+a grëwyd gan y llysgennad Prydeinig i Tsieina Thomas Francis Wade
+(1818--1895) a'i datblygu gan y sinolegydd Herbert Allen Giles
+(1845--1935). Mewn geiriadur Tseinëeg--Saesneg a gyhoeddodd Giles yn
+1892 gwnaed camau breision er sefydlu ei system trawslythrennu ef a Wade
+fel safon ar gyfer Rhufeinio arwyddnodau Tseinëeg, gyda diwygiadau
+pellach yn 1912 gan Giles a'i fab Lionel (1875--1958). Yn ystod ail
+ddegawd yr ugeinfed ganrif, bu trafodaethau a datblygiadau hefyd
+ynghylch Rhufeinio enwau lleoedd, pan safonwyd enwau taleithiau,
+dinasoedd, a threfi ac, yn 1919 enwau mynyddoedd ac afonydd yn ogystal
+yn yr Atlas Post Tsieineaidd a gyhoeddwyd yn 1919. Safodd system
+Wade-Giles ei thir fel yr un safonol mewn llyfrau am Tsieina a
+gyhoeddwyd cyn 1979, pan gymerwyd ei lle i raddau helaeth gan Pinyin,
+system yn deillio o'r 1950au a fabwysiadwyd gan lywodraeth Tsieina yn
+1958. Yn rhagflaenu'r ddwy system hon, fodd bynnag, yr oedd systemau
+lluosog o drawslythrennu. Nid yw o fewn cwmpas y gwaith presennol i
+olrhain seiliau'r systemau a ddefnyddiodd Pennant, ond gellir nodi
+cymhlethdod ac anhawster y gwaith o bennu pa leoliad a olygir oddi wrth
+enwau yn ei systemau Rhufeinio cynnar ef o'u cymharu ag enwau lleoedd
+mewn Pinyin cyfredol.
 
-Fel yn achos y teithiau eraill, ceir crynodebau o'r wybodaeth a ddarparodd Pennant ynghylch daearyddiaeth y lleoliadau (yn daleithiau, ynysoedd, llynnoedd ac afonydd, a dinasoedd a threfi) ac agweddau eraill ar ei ymdriniaeth â hwy o glicio ar yr enwau ar y map o'r daith hon.
+Fel yn achos y teithiau eraill, ceir crynodebau o'r wybodaeth a
+ddarparodd Pennant ynghylch daearyddiaeth y lleoliadau (yn daleithiau,
+ynysoedd, llynnoedd ac afonydd, a dinasoedd a threfi) ac agweddau eraill
+ar ei ymdriniaeth â hwy o glicio ar yr enwau ar y map o'r daith hon.
 
+### **Cyfeiriadau a darllen pellach**
 
-### **Cyfeiriadau a darllen pellach**  
+A. R. H., 'The Romanization of Chinese Place-Names', *The Geographical
+Journal*, cyf. 102, rhif 2 (1943), 67--71, ar
+<https://www.jstor.org/stable/1790134> [cyrchwyd 22 Rhagfyr 2022]
 
-A. R. H., 'The Romanization of Chinese Place-Names', *The Geographical Journal*, cyf. 102, rhif 2 (1943), 67–71, ar <https://www.jstor.org/stable/1790134> [cyrchwyd 22 Rhagfyr 2022]   
+Cunningham, James, 'Part of two letters to the publisher from Mr James
+Cunningham, F. R. S. and Physician to the English at Chusan in China,
+giving an account of his voyage thither, of the Island of Chusan, of the
+several sorts of tea, of the fishing, agriculture of the Chinese, &c.
+with several observations not hitherto taken notice of', yn
+*Philosophical Transactions of the Royal Society of London*, cyf. 23,
+rhif 280, ar <https://doi.org/10.1098/rstl.1702.0023> [cyrchwyd 22
+Rhagfyr 2022]
 
-Cunningham, James, 'Part of two letters to the publisher from Mr James Cunningham, F. R. S. and Physician to the English at Chusan in China, giving an account of his voyage thither, of the Island of Chusan, of the several sorts of tea, of the fishing, agriculture of the Chinese, &c. with several observations not hitherto taken notice of', yn *Philosophical Transactions of the Royal Society of London*, cyf. 23, rhif 280, ar <https://doi.org/10.1098/rstl.1702.0023> [cyrchwyd 22 Rhagfyr 2022]  
+de Ven, Hans J. van, 'Wade, Sir Thomas Francis (1818--1895), yn *ODNB*,
+ar <https://doi.org/10.1093/ref:odnb/28382> [cyrchwyd 20 Rhagfyr 2022]
 
-de Ven, Hans J. van, 'Wade, Sir Thomas Francis (1818–1895), yn *ODNB*, ar <https://doi.org/10.1093/ref:odnb/28382> [cyrchwyd 20 Rhagfyr 2022]  
+Dienw, 'Chinese Romanization Converter', ar
+<http://www.mandarintools.com/pyconverter.html> [cyrchwyd 21 Rhagfyr
+2022]
 
-Dienw, 'Chinese Romanization Converter', ar <http://www.mandarintools.com/pyconverter.html> [cyrchwyd 21 Rhagfyr 2022]  
+Dienw, 'Wade-Giles', yn *New World Encyclopedia*, ar
+<https://www.newworldencyclopedia.org/entry/Wade-Giles#cite_note-2>
+[cyrchwyd 20 Rhagfyr 2022]
 
-Dienw, 'Wade-Giles', yn *New World Encyclopedia*, ar <https://www.newworldencyclopedia.org/entry/Wade-Giles#cite_note-2> [cyrchwyd 20 Rhagfyr 2022]  
+Du Halde, Jean-Baptiste, *A description of the empire of China and
+Chinese-Tartary: together with the kingdoms of Korea, and Tibet*, 2 gyf.
+(London, 1738--41)
 
-Du Halde, Jean-Baptiste, *A description of the empire of China and Chinese-Tartary: together with the kingdoms of Korea, and Tibet*, 2 gyf. (London, 1738–41)  
+Hamilton, Alexander, *A new Account of the East Indies* (Edinburgh,
+1727)
 
-Hamilton, Alexander, *A new Account of the East Indies* (Edinburgh, 1727)  
+Pennant, Thomas, *The View of India Extra Gangem, China and Japan*, gol.
+gan David Pennant (London, 1800)
 
-Pennant, Thomas, *The View of India Extra Gangem, China and Japan*, gol. gan David Pennant (London, 1800) 
+Ryan, Janette, 'Giles, Herbert Allen (1845--1935), yn *ODNB*, ar
+<https://doi.org/10.1093/ref:odnb/33401> [cyrchwyd 20 Rhagfyr 2022]
 
-Ryan, Janette, 'Giles, Herbert Allen (1845–1935), yn *ODNB*, ar <https://doi.org/10.1093/ref:odnb/33401> [cyrchwyd 20 Rhagfyr 2022]  
-
-Staunton, George, *An Authentic Account of an Embassy from the King of Great Britain to the Emperor of China* (London, 1797)  
-
-
+Staunton, George, *An Authentic Account of an Embassy from the King of
+Great Britain to the Emperor of China* (London, 1797)
