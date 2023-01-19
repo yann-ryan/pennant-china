@@ -191,14 +191,21 @@ l
 
 ### **Cyflwyniad**
 
-We could add information on the journeys here for example.
+Yma, cyflwynir y map rhyngweithiol ar ei wedd gyflawn, yn dangos y byd yn ei gyfanrwydd. Y mae'r olwg hon ar y lleoliadau a nodwyd gan Pennant yn ei adroddiad ar Tsieina yn pwysleisio lle'r adroddiad hwnnw o fewn y cyfanwaith y tardda ohono, 'Outlines of the Globe'. Yn yr 'Outlines', cyffyrddir â phob un o gyfandiroedd y byd a oedd yn hysbys i Pennant ar ddiwedd y ddeunawfed ganrif, ac eithrio De America. Y mae'r map hwn yn dangos pwyslais disgwyliedig y diddordeb yn Tsieina ei hun, ond gwelir hefyd gyfeiriadaeth fyd-eang yr adroddiad, â'i gyffyrddiadau ym Mrasil, Virginia, a Quebec ar y ddau gyfandir Americanaidd; cysylltiadau Ewropeaidd niferus; a phwyntiau wedi'u marcio yn Rwsia, Mongolia, India, Japan, ac ynysoedd de-ddwyrain Asia. Eglurir y gyfeiriadaeth sy'n ymwneud yn uniongyrchol â'r chwe thaith benodedig (a nodwyd ar y bar llorweddol ar frig y dudalen hon) mewn nodiadau ar gyfer y pwyntiau a farciwyd. Y mae'r rhesymau dros y cyfeiriadau eraill yn amrywio, a cheir cyfeiriadau at ychydig ohonynt yma.
 
-```{r}
+Y cyfandir nas cyffyrddwyd yn 'Outlines of the Globe', fel y nodwyd, oedd De America. Ar y map hwn, serch hynny, gwelir un cyfeiriad at Frasil. Y rheswm yw ymweliad y teithiwr o'r Iseldiroedd, Johan Nieuhof (1618–72), â'r 'Brazils' yn ystod ei daith gyntaf ar ran Cwmni India'r Dwyrain yr Isalmaen yn 1646. Mewn teithiau pellach, aeth Nieuhof i India (1653), gan ymweld ag arfordir Malaba, penrhyn Malacca, ac Ynysoedd Molwca. Yn ystod ei deithiau, lluniai gofnodion gweledol manwl o fyd natur – gwaith a edmygid gan Pennant. Ar ei daith olaf (1672), glaniodd Nieuhof ym Madagasgar, lle y'i llofruddiwyd, tybid, gan y brodorion.
 
-```
+Un enghraifft bellach sy'n dangos sut y cyflyrid Pennant gan ddarganfyddiadau croesgyfandirol yw'r drafodaeth o'r perlysieuyn jinseng, planhigyn meddyginiaethol adnabyddus y Tsieineaid ('the celebrated medicinal plant of the Chinese'). Rhydd wybodaeth ynghylch ei dwf yn nhaleithiau Shan-si (Shanxi) a Ho-nan (Henan) yn Tsieina, ac yng Nghorea ger llaw. Yna, noda sut y'i darganfuwyd yn nhalaith Virginia gan y botanegydd a'r planhigfäwr trefedigaethol John Clayton (1694/5–1773); a sut y'i cesglid gan lwythi brodorol America i'w werthu i farsiandwyr Quebec. Yr oedd gan yr Indiaid enw arbennig arno, 'Garangtoging' ('morddwyd dynol'), a mewnforiwyd llwythi ohono gan yr Ewropeaid o India i Tsieina. Gartref yn Ewrop, gwelwyd defnydd ohono gan feddygon yn Lloegr, a rhoddwyd tystiolaeth o'i ddefnyddioldeb ger bron cynulleidfaoedd yno gan adroddiad y tad Jeswitaidd Pierre Jartoux (1669–1720), a ymddangosodd ym Mharis yn 1729 ac yn ddiweddarach yn Nhrafodion y Gymdeithas Frenhinol yn Llundain.
 
-### Methodoleg
+Dengys y ddwy enghraifft hyn sut y gwnaed y byd yn hygyrch i bwerau trefedigaethol y Gogledd Fydol, er lles eu datblygiad economaidd a gwleidyddol. Gwelir cydymddibyniaeth perchnogion planhifeydd a marsiandwyr Ewropeaidd â brodorion India a Gogledd America; a hefyd bresenoldeb y cenhadon a fentrai i Tsieina gan adrodd eu profiadau i gynulleidfa werthfawrogol yn ôl yn Ewrop. Drwy'r cenhadon hyn a rhai teithwyr eraill yr agorwyd cil y drws ar Tsieina i Pennant a'i gyfoedion yn Ewrop, gan wneud y mapio hanesyddol a gynrychiolir yn yr adnodd hwn yn bosibl.
 
+### **Cyfeiriadau a darllen pellach**  
+
+Dienw, 'Exploring Antarctica – A timeline', ar <https://www.rmg.co.uk/stories/topics/history-antarctic-explorers>  
+
+Jartoux, Pierre, 'The Description of a Tartarian Plant, call'd Gin-seng; with an Account of its Vitues', *Trafodion Athronyddol Cymdeithas Frenhinol Llundain* (1713), 237–47, ar https://doi.org/10.1098/rstl.1713.0025  
+
+Pennant, Thomas, *The View of India Extra Gangem, China and Japan*, gol. gan David Pennant (London, 1800)
 
 
 # Marco Polo
