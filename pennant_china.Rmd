@@ -12,162 +12,282 @@ editor_options:
     wrap: 72
 ---
 
-# Introduction
+<!-- <style> -->
 
-::: floatting
-```{r out.width='40%', out.extra='style="float:right; padding:10px"'}
+<!-- div.section level2 special-intro { -->
 
-knitr::include_graphics('Picture 3.jpg')
+<!--   max-width: 60%; -->
+
+<!--   margin-left: auto; -->
+
+<!--   margin-right: auto; -->
+
+<!-- } -->
+
+<!-- </style> -->
+
+```{css, echo=FALSE}
+
+div.special-intro {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  background-color:red;
+  border-color:black;
+}
+.navbar-brand {
+color:black!important;
+}
 ```
 
-## Mapio Pennant yn Tsieina
+# Cyflwyniad
 
-<font size="3">  
+## Mapio Pennant yn Tsieina {.special-intro}
 
-Welcome to the website dedicated to the life and work of Thomas Pennant,
-a pioneering Welsh naturalist, traveller, writer, and antiquarian of the
-18th century. On this site, you will find a wealth of information about
-Pennant and his most famous work, "A Tour in China," which chronicled
-his journey through the country and its natural wonders. Additionally,
-we have created a number of interactive maps that allow you to explore
-the locations he visited and the observations he made, bringing his book
-to life in a new and engaging way. This intro is written by ChatGPT and
-hope you enjoy exploring the life and work of this remarkable figure.  
+<font size="4">
 
-
-
-Thomas Pennant was born on June 14th, 1726, and spent his life exploring
-and documenting the natural world around him. He was particularly
-interested in ornithology, and his book "British Zoology" was considered
-a classic in the field. However, it was his journey to China in the late
-1700s that cemented his place in history as a pioneering naturalist and
-traveler. During his trip, Pennant documented the plants, animals, and
-landscapes he encountered, as well as the customs and traditions of the
-Chinese people. His book, "A Tour in China," was published in 1796 and
-is still considered an important primary source for historians and
-naturalists alike.
-
-:::
-
-
-On this website, we have brought together a wealth of information about
-Thomas Pennant and his journey to China, including interactive maps,
-images, and quotes from his book. We hope that this website will help
-you to discover the life and legacy of this fascinating figure and
-inspire you to learn more about the natural world and the history of
-travel.
-
-In addition to the interactive maps, we also have a section dedicated to
-showcasing some of the illustrations from "A Tour in China," which were
-created by the renowned artist Moses Griffith. These illustrations
-provide a visual representation of the plants, animals, and landscapes
-that Pennant encountered during his journey and give a sense of the
-level of detail he included in his book.
-
-
-
-:::floatting  
-
-```{r out.width='40%', out.extra='style="float:left; padding:10px"'}
-
-knitr::include_graphics('Picture 2.jpg')
-```
-
-We also have a section dedicated to highlighting some of the most
-interesting and noteworthy observations made by Pennant during his
-journey. These include his encounters with exotic animals such as the
-panda and his descriptions of the Great Wall of China and other iconic
-landmarks.
-
-Finally, we have also included information about the historical context
-of Pennant's journey to China, including the political and economic
-climate of the time, as well as the general state of European
-exploration and knowledge of China.
-
-
-In summary, this website is dedicated to providing a comprehensive and
-engaging look at the life and work of Thomas Pennant, and we hope that
-it will inspire visitors to learn more about this pioneering naturalist
-and traveler.
-
-:::  
+***Thomas Pennant: Naturiaethwr a theithiwr*** </font> <font size="3">\
+Gwaith Thomas Pennant (1726--98), y naturiaethwr a'r teithiwr o Downing,
+sir Fflint, yw sail y mapiau rhyngweithiol a gyflwynir yn yr adnodd hwn.
+Daeth Pennant i fri yn genedlaethol a rhyngwladol am ei waith ym myd
+natur, gyda chyhoeddiadau niferus o'i waith yn ymddangos o'r 1760au
+ymlaen. Dilynwyd *British Zoology* (1768--70), sef astudiaeth o
+bedwarcarnolion, adar, pysgod, ac ymlusgiaid Ynysoedd Prydain, gan
+*Synopsis of Quadrupeds* (1771), *Genera of Birds* (1773), *Indian
+Zoology* (1781), ac *Arctic Zoology* (1784), â sawl un o'r gweithiau hyn
+yn cael eu diweddaru mewn ailargraffiadau. Erbyn y 1770au a'r 1780au,
+serch hynny, yr oedd Pennant yn ymestyn ei ddiddordebau i gyfeiriadau
+newydd, ac fel teithiwr i'r Alban ac yng ngogledd Cymru y cofir ef yn
+bennaf heddiw, o bosibl. Â'i artist personol, Moses Griffith
+(1747--1819), yn gwmni, gwnaeth gofnod mewn testun a delwedd o
+hynafiaethau, tirluniau, a thopograffeg Cymru a'r Alban, gan gyhoeddi
+golygiadau cyntaf ei gyfrolau am yr Alban ac Ynysoedd Heledd yn 1771 ac
+1774, a'i deithiau yng Nghymru rhwng 1778 ac 1784. Nid deubeth
+anghysylltiedig oedd diddordebau Pennant mewn natur ac mewn teithio,
+fodd bynnag. Defnyddiodd agweddau empeiraidd wrth gasglu gwybodaeth ar
+gyfer ei holl weithiau, ym mha faes bynnag, gan ddibynnu'n aml ar
+rwydweithiau o wybodusion i ddyfnhau ei adnabyddiaeth o'i destunau
 
 </font>
 
-<font size="4">  <b>
+<center>![<font size = '2'><i>Delweddau o gyfrolau darluniedig Thomas Pennant o\'i Deithiau
+yng Nghymru. Llyfrgell Genedlaethol
+Cymru.</i></font>](image_1.png){width="100%"}</center>
 
-Methodology  
+<font size="4">
 
-</b>
+***'Outlines of the Globe'***\
+</font> 
+<font size="3"> Yr oedd yr elfen weledol yn ganolog i waith
+Pennant ac i'w gweld yn yr ysgythriadau a ymddangosodd yn ei
+gyhoeddiadau. At hyn, datblygodd arfer o ddarlunio copïau o'i weithiau
+er ei fwyniant ei hun, arfer a elwir weithiau yn 'Grangerization', ar ôl
+un o'i harferwyr cynharaf, James Granger (1723--76). Cedwir heddiw yn
+Llyfrgell Genedlaethol Cymru sawl cyfrol drawiadol o waith Pennant fel
+darluniwr cyfrolau ('extra-illustrator' / 'Grangerizer'). Wrth i Pennant
+heneiddio, daeth ei ddyddiau fel teithiwr gwirioneddol i ben, a throes
+ei olygon yn hytrach at greu adroddiadau o hirbell ynghylch rhannau o'r
+byd nad oedd erioed wedi ymweld â hwy. Dyna oedd 'Outlines of the
+Globe', gwaith a gynhwysai ddwy gyfrol ar hugain ac a gadwyd yn
+llyfrgell Downing hyd nes y'i gwerthwyd yn ei gyfanrwydd i'r Amgueddfa
+Forwrol Genedlaethol yn 1938. Daeth arferion empeiraidd Pennant -- ei
+ddarllen eang mewn ffynonellau print a'i ddibyniaeth ar rwydweithiau
+gwybodaeth -- at ei ddefnydd yma, drachefn, wrth iddo lunio campwaith a
+gynhwysai adroddiadau am wledydd a chyfandiroedd dieithr, y tu hwnt i
+Gymru, Prydain, ac Ewrop. At hyn, yr oedd cynnwys delweddau o
+ffynonellau amrywiol, yn ysgythriadau, darluniau, a dyfrlliwiau
+gwreiddiol, yn rhan greiddiol o'r prosiect uchelgeisiol hwn, drachefn, â
+medrau gweledol Pennant yn cael eu hymestyn i'r eithaf.
 
-</font>
+</font> 
+<center>
 
-<font size="3">  
-
-Y man cychwyn yn y broses o lunio'r mapiau niferus a welir yn yr adnodd
-hwn -- o'r map cyflawn o'r byd hyd at fapiau siwrneiau teithwyr unigol
-o'r Oesoedd Canol hyd at ddyddiau Pennant -- oedd sganio testun
-cyhoeddedig taith Pennant, The View of India Extra Gangem, China and
-Japan, gol. gan David Pennant (London, 1800). Defnyddiwyd technoleg
-Adnabod arwyddnodau gweledol (OCR; Optical character recognition) i
-gywiro gwallau a ddeilliai o'r sganiadau, a rhannu'r testun fesul
-tudalen unigol. Llwythwyd yr holl dudalennau, cyfanswm o 119, i raglen
-anodi semantig Recogito, ar <https://recogito.pelagios.org/>, gan
-weithio ar anodi enwau pobl, lleoedd, a digwyddiadau drwy'r testun yn ei
-gyfanrwydd. Y prif ffocws oedd enwau lleoedd, a defnyddiwyd geiriadur
-daearyddol geonames, sy'n darparu geogyfeiriadau digidol ar gyfer enwau
-lleoedd, boed yn wledydd, taleithiau, dinasoedd, neu nodweddion
-naturiol. Y geogyfeiriadau hyn oedd y sail i'r map cyflawn.
-
-Ymhellach, aed ati i roi sylw manwl i chwech o deithiau penodol a
-drafodir yn nhestun Pennant. Gan gychwyn ag un o'r ymweliadau cynharaf
-o'r Gorllewin i Tsieina, taith Marco Polo, a pharhau drwy'r unfed ganrif
-ar bymtheg a'r ail ganrif ar bymtheg, gyda theithiau Fernão Pires de
-Andrade, Francis de Xavier, Matteo Ricci, a Johan Nieuhof, daethpwyd i
-ben gyda thaith ddychmygol Pennant ei hun ar hyd arfordir Tsieina. Enwyd
-y teithiau yn eu trefn gronolegol ar hyd y bar llorweddol ar frig y
-dudalen a gellir cael mynediad iddynt hwy, yn ogystal â map cyflawn,
-sy'n nodi'r holl leoliadau a grybwyllir yn nhestun Pennant, drwy glicio
-ar yr enwau hyn. O gael mynediad i'r mapiau unigol, gellir hofran y
-llygoden uwch ben enwau lleoedd, a chlicio arnynt i gael enw modern y
-lleoliad a'r enw a welir yn nhestun Pennant. Yn achos y teithiau
-arbenigol (siwrneiau'r teithwyr), cyflwynir i'r defnyddiwr yn ogystal
-wybodaeth bellach, yn cyfeirio at destun Pennant ac yn nodi ffactorau
-eraill o bwys o ran pennu'r lleoliad. Tynnwyd y nodiadau ym mhob achos
-o'r deunydd a gofnodwyd ar gyfer y lleoliadau unigol ar Recogito. At
-hyn, ceir cyflwyniad i'r map cyflawn ac i bob taith unigol mewn blwch ar
-ochr dde'r sgin, gyda blwch islaw yn rhestru cyfeiriadau ac awgrymiadau
-ar gyfer darllen pellach.
-
-Y mae'n bosibl closio at ardaloedd penodol ar y map â'r llygoden
-('zoom'). X yw ffynhonnell y map a ddefnyddir ar gyfer pob rhan o'r
-gwaith, ac eithrio taith Johan Nieuhof, lle y defnyddiwyd map
-hanesyddol, gan nodi lleoliadau a enwir gan Pennant sydd hefyd i'w gweld
-ar hwn. I lunio'r adnodd arbenigol hwn, defnyddiwyd map o gasgliad
-mapiau David Rumsey (David Rumsey Map Collection), ar
-<https://www.davidrumsey.com/>. Gw. Johan Nieuhof: Cyfeiriadau a darllen
-pellach am gyfeiriad penodol at y map dan sylw. Mewnforiwyd ef i raglen
-MapTiler, ar <https://www.maptiler.com/>, lle y gellid ei anodi â
-chyfeiriadau penodol at nodiadau manwl ar y lleoliadau yn Recogito. O
-hofran a chlicio uwch yr enwau a farciwyd ar y map, gellir gweld yr enw
-yn nhestun Pennant, sydd yn cyfateb yn bur agos i enwau'r map
-hanesyddol, ynghyd â gwybodaeth bellach yn trafod unrhyw anawsterau ac
-yn cyd-destuoli'r wybodaeth.
+![<font size = '2'><i>Delwedd o Nanjing o daith Johan Nieuhof yn
+Tsieina, wedi'i arbed yn Thomas Pennant, 'Outlines of the Globe: China
+and Japan', Yr Amgueddfa Forwrol
+Genedlaethol.</i></font>](T1411-015%20(1).jpg){width="80%"}
 
 </font>
 
-<font size="4">  <b>
+</center>
 
-Credits    
+<font size="4">
 
-</b>
+***Pennant y mapiwr, a mapio Pennant***\
+</font> <font size="3"> Elfen arall gyson bresennol yng nghyfrolau
+'Outlines of the Globes' yw mapiau a siartiau morwrol, tyst i
+chwilfrydedd Pennant ynghylch daearyddiaeth cyfandiroedd y byd. Yr oedd
+eisoes wedi dangos ei ddiddordeb yn y maes yng nghyswllt ei 'deithiau
+cartref' yng ngogledd Lloegr, yr Alban, a Chymru. Profodd ei allu ei
+hunan fel mapiwr drwy baratoi map newydd o'r Alban i gydfynd â'i daith
+yno yn 1772. Dengys ei ohebiaeth â'r casglwr tollau o Gaeredin, George
+Paton (1721--1807), sut yr aeth ati i gasglu neu i sicrhau mynediad at
+fapiau o'r wlad, yn eu plith fap o waith William Roy (1726--90), a
+luniwyd ar gyfer arolwg milwrol o Ucheldiroedd yr Alban yn dilyn
+gwrthryfel Jacobitaidd 1745 ond nas cyhoeddwyd hyd 1793. Anfonodd Paton
+enghreifftiau niferus o fapiau print eraill ato, ac ymatebodd hefyd i
+geisiadau Pennant am wybodaeth dopograffig i'w chynnwys wrth iddo fynd
+ati i lunio'i fap ei hun. Cyhoeddwyd y map yn 1777 o dan y teitl *A Map
+of Scotland, the Hebrides and Part of England adapted to Mr Pennant's
+Tours*. Yng Nghymru, dangosodd Pennant ei gefnogaeth i'r mapiwr John
+Evans (1723--95) o Lanymynech, sir Drefaldwyn. Cyhoeddodd Evans fap naw
+dalen o Ogledd Cymru yn 1795, gydag un pellach, ar raddfa lai, yn
+ymddangos yn 1797, wedi ei farwolaeth. Cynhwysodd Pennant nifer o'r
+dalennau hyn yn ei fersiwn bersonol o'i Deithiau yng Nghymru.
 
 </font>
 
+<center>
 
-<font size="3">  
+![<font size = '2'><i>Dau fap o waith John Evans, o gyfrolau darluniedig Thomas
+Pennant o\'i Deithiau yng Nghymru. Llyfrgell Genedlaethol Cymru. Delwedd
+o Makou o daith Johan Nieuhof yn Tsieina, wedi\'i arbed yn Thomas
+Pennant, 'Outlines of the Globe: China and Japan', Yr Amgueddfa Forwrol
+Genedlaethol</i></font>](image_3.png){width="100%"}
 
-Credits here
+</font>
+
+</center>
+
+<font size="3">
+
+
+Yng nghyfrol 17 o 'Outlines of the Globe' trafodir Tsieina a Japan.
+Cynrychiolwyd mapiau yn y drafodaeth ynghylch y gyntaf o'r ddwy wlad hon
+gan siartiau morwrol o waith Alexander Dalrymple (1737--1808),
+hydrograffydd i Gwmni India'r Dwyrain ac i'r Morlys. Yr oedd Dalrymple
+yn aelod allweddol o griw a anfonwyd ar sgwner y Cuddalore ar gyfres o
+dair mordaith i dde-ddwyrain Asia rhwng 1759 ac 1764, gyda'r bwriad o
+ddarganfod llwybr newydd i Tsieina drwy Ynysoedd Molwca a Gini Newydd.
+Daeth copi o'i siart 'Views on the Coast of Henan by AD in Schooner
+Cuddalore 1760' i ddwylo Pennant, a chynhwyswyd ef yn yr adroddiad
+ynghylch Tsieina. Yn 1779, apwyntiwyd Dalrymple yn gyhoeddwr siartiau
+swyddogol ar gyfer Cwmni India'r Dwyrain. Rhwng y flwyddyn honno a 1794,
+cyhoeddodd dros bum cant o siartiau graddfa-fechan a chynlluniau o
+forwriaeth y Cwmni, gan gynnwys chwe enghraifft bellach a ddefnyddiwyd
+gan Pennant, oll yn dyddio rhwng 1780 ac 1783. Nodweddir y rhain i gyd
+gan eu harddull foel, ddiaddurn.
+
+Dau fap arall yn unig a welir o fewn cloriau'r gyfrol hon. Yn 'Sketch of
+the Typa and Macao', dangosir amlinelliad o Macao (Macau) ac ynysoedd
+Taipa i'r de o Guangzhou mewn map sy'n deillio o daith James Cook
+(1728--79), *A Voyage to the Pacific Ocean*. Ymwelodd criw Cook â Macao
+ym mis Rhagfyr 1779, wedi ei farwolaeth ef ym mis Chwefror y flwyddyn
+honno, cyn ymadael â'r dwyrain ar eu mordaith yn ôl i Loegr. Cynhwysodd
+Pennant yn ogystal gynllun o ddinas Canton (Guangzhou) o waith Johan
+Nieuhof, lle gwelir strydoedd unionsyth wedi'u hamgáu gan furiau trwchus
+gyda mynedfeydd caerog. Mewn labeli pellach, ceir argraff o weinyddiaeth
+y ddinas drwy ei swyddogion (yn frenin a thywysog); o raniad ei phobl yn
+ôl hil (mewn cyfeiriad at ardal drigiannol y Tartariaid a'r fan lle cânt
+ymarfer); ac o bresenoldeb cydwladwyr Nieuhof ar ei chyrion (yn nhŷ'r
+llysgenhadon a drwy'r delweddau o'u llongau yn y bae y tu hwnt).
+
+Yn y map rhyngweithiol a arddangosir yma, cyflwynir yr adroddiad am
+Tsieina drwy lens ddaearyddol, sy'n adlewyrchu'r sylw a roes Pennant i
+leoliadau penodol yn yr ymerodraeth bellennig hon. Os oedd cynllun
+Nieuhof o Canton, a ymddangosodd yn fersiwn Saesneg John Ogilby o'i
+waith, ar gael i Pennant, y mae'n bur sicr y byddai hefyd wedi gweld y
+map llawn o daith yr Iseldirwr yn yr un cyhoeddiad. Cynhwysir y map
+hanesyddol hwnnw fel sail i'r map rhyngweithiol o daith Nieuhof yn yr
+adnodd hwn, mewn ymdrech i ddynesu at brofiad daearyddol Pennant o
+Tsieina. At hyn, mapiwyd lleoliadau eraill a grybwyllir ganddo yn y
+testun, gan ganolbwyntio ar bum taith bellach, a leolwyd ar fap modern.
+Y mae'r gwaith mapio oll yn adlewyrchu enghreifftiau eraill diweddar o
+fapio teithiau Pennant: ei deithiau yn yr Alban, a'i daith i Gyfandir
+Ewrop yn 1765. (Gw. cyfeiriadau isod.)
+
+</font>
+
+<font size="4">
+
+***Cyfeiriadau a darllen pellach:***\
+</font> <font size="3">   
+
+* Cook, Andrew S., 'Dalrymple, Alexander
+(1737--1808)', yn *Oxford Dictionary of National Biography*, ar
+<https://doi.org/10.1093/ref:odnb/7044>
+
+* *idem*, 'Alexander Dalrymple (1737--1808), hydrographer to the East
+India Company, and the Admiralty, as publisher: A catalogue of books and
+charts' (traethawd PhD anghyhoeddedig Prifysgol St. Andrews, 1993), ar
+<https://research-repository.st-andrews.ac.uk/handle/10023/2634>
+
+* Cook, James, a James King, *A voyage to the Pacific Ocean. Undertaken,
+by the command of His Majesty, for making discoveries in the Northern
+Hemisphere. Performed under the direction of Captains Cook, Clerke, and
+Gore, in His Majesty's ships the Resolution and Discovery; in the years
+1776, 1777, 1778, 1779, and 1780*, 3 cyf. (London, 1784), cyf. III, yn
+enw. rhwng tt. 420 a 421
+
+* Deans, Alex, 'Llyfryddiaeth fer i Deithiau Thomas Pennant yng Nghymru
+a'r Alban', ar
+<https://curioustravellers.ac.uk/cy/llyfryddiaeth-fer-i-deithiau-thomas-pennant-yng-nghymru-ar-alban/>
+
+* *idem*, *The Correspondence of Thomas Pennant and George Paton,
+1773--1798*, ar <https://editions.curioustravellers.ac.uk/letters>
+
+* *idem* a Nigel Leask, 'Curious Travellers: Thomas Pennant and the Welsh
+and Scottish Tour (1760--1820)', yn *Studies in Scottish Literature*, cyf.
+42, rhif 2 (2016), 164--172, ar
+<https://scholarcommons.sc.edu/ssl/vol42/iss2/4>
+
+* Deans, Alex, Chris Fleet, a Luca Guariento, 'The Map', ar
+<https://curioustravellers.ac.uk/en/the-map/>
+
+* Evans, R. Paul, 'Richard Bull and Thomas Pennant: Virtuosi in the Art
+of Grangerisation or Extra-Illustration', *Cylchgrawn Llyfrgell
+Genedlaethol Cymru*, 30, rhif 3 (1998), 269--94
+
+* Jones, Ffion Mair, *The Correspondence of Thomas Pennant and Richard
+Bull, 1773--1798*, ar <https://editions.curioustravellers.ac.uk/letters>
+
+* *eadem*, 'A new look at the correspondence of Thomas Pennant and Richard
+Bull (1773--1798)', ar
+<https://editions.curioustravellers.ac.uk/new_look>
+
+* *eadem* a Yann Ryan, 'Thomas Pennant's Tour of the
+Continent', ar
+<https://networkingarchives.github.io/pennant_map_dashboard>
+
+* Nieuhoff, John [*sic*], *An Embassy from the East-India Company of the
+United Provinces, to the Grand Tartar Cham Emperor of China*,
+cyfieithwyd gan John Ogilby, 2il arg. (London, 1673)
+
+* North, Frederick John, 'Evans, John (1723--1795)', yn *Y Bywgraffiadur
+Cymreig*, ar <https://bywgraffiadur.cymru/article/c-EVAN-JHN-1723>
+
+* Pennant, Thomas, *A Tour in Wales*, ar
+<https://www.llyfrgell.cymru/darganfod-dysgu/arddangosfeydd-arlein/darluniau/a-tour-in-wales>
+
+* *idem*, 'Outlines of the Globe', P/16/1--/25, yn yr Amgueddfa Forwrol
+Genedlaethol, ar
+<https://www.rmg.co.uk/collections/archive/rmgc-object-492490>
+
+* *idem*, 'Outlines of the Globe: China and Japan', yn yr Amgueddfa
+Forwrol Genedlaethol, P/16/17
+
+* *idem*, *The View of India Extra Gangem, China and Japan*, gol. gan
+David Pennant (London, 1800)
+
+* Walters, Gwyn, 'Thomas Pennant's Map of Scotland, 1777: A Study in
+Sources, and an Introduction to George Paton's Role in the History of
+Scottish Cartography', *Imago Mundi: The Journal of the International
+Society for the History of Cartography*, 28:2 (1976), 121--8
+
+</font>
+
+<font size="4">
+
+***Delweddau***\
+</font> <font size="3">\
+Daw'r delweddau ar y dudalen hon o *Deithiau* darluniedig Thomas Pennant
+yng Nghymru, yn Llyfrgell Genedlaethol Cymru, drwy wikimedia, ar
+<https://tinyurl.com/28bu9npa>;
+ac o Thomas Pennant, 'Outlines of the Globe: China and Japan', yn yr
+Amgueddfa Forwrol Genedlaethol, P/16/17
 
 </font>
 
@@ -183,30 +303,78 @@ library(leaflet)
 ### Map
 
 ```{r}
-load('l')
-l
+load('pennant_full_leaflet')
+pennant_full_leaflet
 ```
 
 ## Column {data-width="350"}
 
 ### **Cyflwyniad**
 
-Yma, cyflwynir y map rhyngweithiol ar ei wedd gyflawn, yn dangos y byd yn ei gyfanrwydd. Y mae'r olwg hon ar y lleoliadau a nodwyd gan Pennant yn ei adroddiad ar Tsieina yn pwysleisio lle'r adroddiad hwnnw o fewn y cyfanwaith y tardda ohono, 'Outlines of the Globe'. Yn yr 'Outlines', cyffyrddir â phob un o gyfandiroedd y byd a oedd yn hysbys i Pennant ar ddiwedd y ddeunawfed ganrif, ac eithrio De America. Y mae'r map hwn yn dangos pwyslais disgwyliedig y diddordeb yn Tsieina ei hun, ond gwelir hefyd gyfeiriadaeth fyd-eang yr adroddiad, â'i gyffyrddiadau ym Mrasil, Virginia, a Quebec ar y ddau gyfandir Americanaidd; cysylltiadau Ewropeaidd niferus; a phwyntiau wedi'u marcio yn Rwsia, Mongolia, India, Japan, ac ynysoedd de-ddwyrain Asia. Eglurir y gyfeiriadaeth sy'n ymwneud yn uniongyrchol â'r chwe thaith benodedig (a nodwyd ar y bar llorweddol ar frig y dudalen hon) mewn nodiadau ar gyfer y pwyntiau a farciwyd. Y mae'r rhesymau dros y cyfeiriadau eraill yn amrywio, a cheir cyfeiriadau at ychydig ohonynt yma.
+Yma, cyflwynir y map rhyngweithiol ar ei wedd gyflawn, yn dangos y byd
+yn ei gyfanrwydd. Y mae'r olwg hon ar y lleoliadau a nodwyd gan Pennant
+yn ei adroddiad ar Tsieina yn pwysleisio lle'r adroddiad hwnnw o fewn y
+cyfanwaith y tardda ohono, 'Outlines of the Globe'. Yn yr 'Outlines',
+cyffyrddir â phob un o gyfandiroedd y byd a oedd yn hysbys i Pennant ar
+ddiwedd y ddeunawfed ganrif, ac eithrio De America. Y mae'r map hwn yn
+dangos pwyslais disgwyliedig y diddordeb yn Tsieina ei hun, ond gwelir
+hefyd gyfeiriadaeth fyd-eang yr adroddiad, â'i gyffyrddiadau ym Mrasil,
+Virginia, a Quebec ar y ddau gyfandir Americanaidd; cysylltiadau
+Ewropeaidd niferus; a phwyntiau wedi'u marcio yn Rwsia, Mongolia, India,
+Japan, ac ynysoedd de-ddwyrain Asia. Eglurir y gyfeiriadaeth sy'n
+ymwneud yn uniongyrchol â'r chwe thaith benodedig (a nodwyd ar y bar
+llorweddol ar frig y dudalen hon) mewn nodiadau ar gyfer y pwyntiau a
+farciwyd. Y mae'r rhesymau dros y cyfeiriadau eraill yn amrywio, a cheir
+cyfeiriadau at ychydig ohonynt yma.
 
-Y cyfandir nas cyffyrddwyd yn 'Outlines of the Globe', fel y nodwyd, oedd De America. Ar y map hwn, serch hynny, gwelir un cyfeiriad at Frasil. Y rheswm yw ymweliad y teithiwr o'r Iseldiroedd, Johan Nieuhof (1618–72), â'r 'Brazils' yn ystod ei daith gyntaf ar ran Cwmni India'r Dwyrain yr Isalmaen yn 1646. Mewn teithiau pellach, aeth Nieuhof i India (1653), gan ymweld ag arfordir Malaba, penrhyn Malacca, ac Ynysoedd Molwca. Yn ystod ei deithiau, lluniai gofnodion gweledol manwl o fyd natur – gwaith a edmygid gan Pennant. Ar ei daith olaf (1672), glaniodd Nieuhof ym Madagasgar, lle y'i llofruddiwyd, tybid, gan y brodorion.
+Y cyfandir nas cyffyrddwyd yn 'Outlines of the Globe', fel y nodwyd,
+oedd De America. Ar y map hwn, serch hynny, gwelir un cyfeiriad at
+Frasil. Y rheswm yw ymweliad y teithiwr o'r Iseldiroedd, Johan Nieuhof
+(1618--72), â'r 'Brazils' yn ystod ei daith gyntaf ar ran Cwmni India'r
+Dwyrain yr Isalmaen yn 1646. Mewn teithiau pellach, aeth Nieuhof i India
+(1653), gan ymweld ag arfordir Malaba, penrhyn Malacca, ac Ynysoedd
+Molwca. Yn ystod ei deithiau, lluniai gofnodion gweledol manwl o fyd
+natur -- gwaith a edmygid gan Pennant. Ar ei daith olaf (1672), glaniodd
+Nieuhof ym Madagasgar, lle y'i llofruddiwyd, tybid, gan y brodorion.
 
-Un enghraifft bellach sy'n dangos sut y cyflyrid Pennant gan ddarganfyddiadau croesgyfandirol yw'r drafodaeth o'r perlysieuyn jinseng, planhigyn meddyginiaethol adnabyddus y Tsieineaid ('the celebrated medicinal plant of the Chinese'). Rhydd wybodaeth ynghylch ei dwf yn nhaleithiau Shan-si (Shanxi) a Ho-nan (Henan) yn Tsieina, ac yng Nghorea ger llaw. Yna, noda sut y'i darganfuwyd yn nhalaith Virginia gan y botanegydd a'r planhigfäwr trefedigaethol John Clayton (1694/5–1773); a sut y'i cesglid gan lwythi brodorol America i'w werthu i farsiandwyr Quebec. Yr oedd gan yr Indiaid enw arbennig arno, 'Garangtoging' ('morddwyd dynol'), a mewnforiwyd llwythi ohono gan yr Ewropeaid o India i Tsieina. Gartref yn Ewrop, gwelwyd defnydd ohono gan feddygon yn Lloegr, a rhoddwyd tystiolaeth o'i ddefnyddioldeb ger bron cynulleidfaoedd yno gan adroddiad y tad Jeswitaidd Pierre Jartoux (1669–1720), a ymddangosodd ym Mharis yn 1729 ac yn ddiweddarach yn Nhrafodion y Gymdeithas Frenhinol yn Llundain.
+Un enghraifft bellach sy'n dangos sut y cyflyrid Pennant gan
+ddarganfyddiadau croesgyfandirol yw'r drafodaeth o'r perlysieuyn
+jinseng, planhigyn meddyginiaethol adnabyddus y Tsieineaid ('the
+celebrated medicinal plant of the Chinese'). Rhydd wybodaeth ynghylch ei
+dwf yn nhaleithiau Shan-si (Shanxi) a Ho-nan (Henan) yn Tsieina, ac yng
+Nghorea ger llaw. Yna, noda sut y'i darganfuwyd yn nhalaith Virginia gan
+y botanegydd a'r planhigfäwr trefedigaethol John Clayton (1694/5--1773);
+a sut y'i cesglid gan lwythi brodorol America i'w werthu i farsiandwyr
+Quebec. Yr oedd gan yr Indiaid enw arbennig arno, 'Garangtoging'
+('morddwyd dynol'), a mewnforiwyd llwythi ohono gan yr Ewropeaid o India
+i Tsieina. Gartref yn Ewrop, gwelwyd defnydd ohono gan feddygon yn
+Lloegr, a rhoddwyd tystiolaeth o'i ddefnyddioldeb ger bron
+cynulleidfaoedd yno gan adroddiad y tad Jeswitaidd Pierre Jartoux
+(1669--1720), a ymddangosodd ym Mharis yn 1729 ac yn ddiweddarach yn
+Nhrafodion y Gymdeithas Frenhinol yn Llundain.
 
-Dengys y ddwy enghraifft hyn sut y gwnaed y byd yn hygyrch i bwerau trefedigaethol y Gogledd Fydol, er lles eu datblygiad economaidd a gwleidyddol. Gwelir cydymddibyniaeth perchnogion planhifeydd a marsiandwyr Ewropeaidd â brodorion India a Gogledd America; a hefyd bresenoldeb y cenhadon a fentrai i Tsieina gan adrodd eu profiadau i gynulleidfa werthfawrogol yn ôl yn Ewrop. Drwy'r cenhadon hyn a rhai teithwyr eraill yr agorwyd cil y drws ar Tsieina i Pennant a'i gyfoedion yn Ewrop, gan wneud y mapio hanesyddol a gynrychiolir yn yr adnodd hwn yn bosibl.
+Dengys y ddwy enghraifft hyn sut y gwnaed y byd yn hygyrch i bwerau
+trefedigaethol y Gogledd Fydol, er lles eu datblygiad economaidd a
+gwleidyddol. Gwelir cydymddibyniaeth perchnogion planhifeydd a
+marsiandwyr Ewropeaidd â brodorion India a Gogledd America; a hefyd
+bresenoldeb y cenhadon a fentrai i Tsieina gan adrodd eu profiadau i
+gynulleidfa werthfawrogol yn ôl yn Ewrop. Drwy'r cenhadon hyn a rhai
+teithwyr eraill yr agorwyd cil y drws ar Tsieina i Pennant a'i gyfoedion
+yn Ewrop, gan wneud y mapio hanesyddol a gynrychiolir yn yr adnodd hwn
+yn bosibl.
 
-### **Cyfeiriadau a darllen pellach**  
+### **Cyfeiriadau a darllen pellach**
 
-Dienw, 'Exploring Antarctica – A timeline', ar <https://www.rmg.co.uk/stories/topics/history-antarctic-explorers>  
+Dienw, 'Exploring Antarctica -- A timeline', ar
+<https://www.rmg.co.uk/stories/topics/history-antarctic-explorers>
 
-Jartoux, Pierre, 'The Description of a Tartarian Plant, call'd Gin-seng; with an Account of its Vitues', *Trafodion Athronyddol Cymdeithas Frenhinol Llundain* (1713), 237–47, ar https://doi.org/10.1098/rstl.1713.0025  
+Jartoux, Pierre, 'The Description of a Tartarian Plant, call'd Gin-seng;
+with an Account of its Vitues', *Trafodion Athronyddol Cymdeithas
+Frenhinol Llundain* (1713), 237--47, ar
+<https://doi.org/10.1098/rstl.1713.0025>
 
-Pennant, Thomas, *The View of India Extra Gangem, China and Japan*, gol. gan David Pennant (London, 1800)
-
+Pennant, Thomas, *The View of India Extra Gangem, China and Japan*, gol.
+gan David Pennant (London, 1800)
 
 # Marco Polo
 
@@ -552,20 +720,20 @@ gan David Pennant (London, 1800), tt. 96--7
 Yu Liu, 'The True Pioneer of the Jesuit China Mission: Michele
 Ruggieri', *History of Religions*, cyf. 50, rhif 4, 362--83
 
-# Johan Nieuhof
+# Johan Nieuhof  
 
 ## Column {data-width="650"}
 
-### Map
+### Map  
 
 ```{r}
 load('nieuhof_leaflet')
 nieuhof_leaflet
 ```
 
-## Column {data-width="350"}
+## Column {data-width="350"}  
 
-### **Cyflwyniad**
+### **Cyflwyniad**  
 
 Adroddodd Pennant gyda chryn fanylder lwybr taith Johan Nieuhof, fel
 rhan o lysgenhadaeth o'r Iseldiroedd i Tsieina rhwng 1655 ac 1657.
@@ -609,7 +777,7 @@ Vander Aa, Pierre, *Carte exacte de toutes les provinces, villes,
 bourgs, villages et rivieeres du vaste et puissant empire de la Chine,
 faite par les ambassadeurs hollandois dans leur voyage de Batavia à
 Peking. dressee par Jean Nieuhof* (Leiden, 1728), ar
-<https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297075~90068752:1--Chine-carte;JSESSIONID=1cf8541d-4618-44b5-bba2-605c2fe015b4?qvq=q%3ANieuhof%3Bsort%3APub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No%3Blc%3ARUMSEY%7E8%7E1&sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=0&trs=57>
+<https://www.davidrumsey.com/luna/servlet/s/w5ex3f>
 
 Dienw, Pieter van der Aa, ar
 <https://www.britishmuseum.org/collection/term/BIOG178415> [cyrchwyd 4
@@ -729,3 +897,132 @@ Ryan, Janette, 'Giles, Herbert Allen (1845--1935), yn *ODNB*, ar
 
 Staunton, George, *An Authentic Account of an Embassy from the King of
 Great Britain to the Emperor of China* (London, 1797)
+
+------------------------------------------------------------------------
+
+# Gwybodaeth bellach
+
+## Gwybodaeth bellach {.special-intro}
+
+<font size="4"> ***Methodoleg*** </font> <font size="3">\
+Y man cychwyn yn y broses o lunio'r mapiau rhyngweithiol niferus a welir
+yn yr adnodd hwn oedd sganio testun cyhoeddedig taith Pennant, The View
+of India Extra Gangem, China and Japan, gol. gan David Pennant (London,
+1800). Proseswyd y sganiau hyn ymlaen llaw i'w gwneud yn addas ar gyfer
+technoleg Adnabod Arwyddnodau Gweledol (Optical Character Recognition;
+OCR). Rhannwyd sganiau dwy dudalen yn dudalennau unigol; troswyd y
+delweddau i ystod o arlliwiau llwyd (greyscale), gan roi cyferbyniad
+dyfnach o ran lliw; diddymwyd ymylon ac ychwanegolion yn awtomatig gan
+ddefnyddio meddalwedd ImageMagick; a throswyd y sganiau yn destun
+darllenadwy i beiriannau gan ddefnyddio llyfrgell OCR Tesseract, adnodd
+ffynhonnell-agored. Yn dilyn hyn, cywirwyd â llaw wallau yn y ffeiliau
+testun plaen a ddeilliai o'r broses OCR. Llwythwyd yr holl dudalennau,
+cyfanswm o 119, i raglen anodi semantig Recogito, ar
+<https://recogito.pelagios.org/>, gan weithio ar anodi enwau pobl,
+lleoedd, a digwyddiadau drwy'r testun yn ei gyfanrwydd. Y prif ffocws
+oedd enwau lleoedd, a defnyddiwyd geiriadur daearyddol geonames,
+<https://www.geonames.org/>, sy'n darparu geogyfeiriadau digidol, ar
+gyfer yr enwau hyn, boed yn wledydd, taleithiau, dinasoedd, neu
+nodweddion naturiol.
+
+Ar gyfer y cam nesaf defnyddiwyd 'taflen' ('leaflet') llyfrgell
+javascript, <https://leafletjs.com/>. Darparwyd haenau data ychwanegol
+o'r anodiadau yn Recogito gan arfer yr iaith raglennu R, yn enwedig y
+pecyn 'sf'. Crëwyd teils map rhastr ag Open Street Map, set ddata agored
+o ddata daearyddol ac enwau lleoedd modern. Open Street Map sydd hefyd
+yn cynnal y teils hyn. Am restr o gyfranwyr gweler yma:
+<https://www.openstreetmap.org/copyright>. Adeiladwyd y dudalen we ei
+hun gan ddefnyddio iaith farcio R (R markdown), gyda gosodiadau o'r
+pecyn 'fflecsfwrdd' (flexdashboard). Gellir gweld côd ffynhonnell y
+dudalen we a'r wybodaeth ynghylch paratoi'r data yma:
+<https://github.com/yann-ryan/pennant-china>
+
+Uwch ben y teils rhastr a ddarperir drwy OpenStreetmap, cyfunwyd haenau
+ar gyfer cyfeiriadau perthnasol at wledydd a thaleithiau gan
+ddefnyddio'r ffeiliau siapiau map sydd ar gael drwy'r gronfa ddata
+ffynhonnell-agored, Natural Earth, <https://www.naturalearthdata.com/>.
+Darperir yma enwau lleoedd ym mhrif iaith (neu ieithoedd) y lleoliadau,
+a dangosir ffiniau modern ar gyfer gwledydd a thaleithiau.
+
+Ar gyfer un o'r teithiau, defnyddiwyd proses ychydig yn wahanol. Mapiwyd
+taith Johan Nieuhof gan Pieter van der Aa yn 1728, a'r map hanesyddol
+hwn yw'r sail y tro hwn. Defnyddiwyd map o gasgliad mapiau David Rumsey
+(David Rumsey Map Collection), ar <https://www.davidrumsey.com/>.
+Mewnforiwyd ef i raglen MapTiler, ar <https://www.maptiler.com/>, gan ei
+farcio â lleoliadau a enwir gan Pennant ynghyd â nodiadau perthnasol o
+Recogito. Nid oedd data daearyddol manwl ar gael ar gyfer pob un o'r
+lleoliadau a enwir, ac y mae rhai o'r cyfatebiaethau rhwng y map ac
+adroddiad Pennant yn ansicr. Defnyddiwyd cynllun lliwiau i wahaniaethu
+rhwng cyfatebiaethau sicr (glas tywyll) ac ansicr (glas golau). </font>
+
+<font size="4">
+
+***Canllaw i'r defnyddiwr***\
+</font> <font size="3"> Yn yr adnodd hwn, gwelir map llawn o'r byd,
+wedi'i anodi â lleoliadau (gwledydd, taleithiau, afonydd, trefi a
+dinasoedd) a enwir yn adroddiad Thomas Pennant ynghylch Tsieina o'i
+'Outlines of the Globe' (y fersiwn printiedig, The View of India Extra
+Gangem, China and Japan, gol. gan David Pennant (London, 1800)). O
+hofran â'r llygoden uwchben y pwyntiau a farciwyd, gwelir eu henwau
+modern yn y Gymraeg. O glicio arnynt, ceir enw safonol modern (yn
+Gymraeg, os oes un); enw yn y testun; a rhif(au) tudalen yn Pennant, *The
+View of India Extra Gangem, China and Japan*.
+
+Ymhellach, rhoddir sylw manwl i chwech o deithiau penodol: teithiau
+Marco Polo, Fernão Pires de Andrade, Francis de Xavier, Matteo Ricci, a
+Johan Nieuhof, ynghyd â thaith ddychmygol Pennant ar hyd arfordir
+Tsieina. Enwir y teithiau yn eu trefn gronolegol ar hyd y bar llorweddol
+ar frig y dudalen a gellir eu gweld nhw, yn ogystal â'r map cyflawn,
+drwy glicio ar yr enwau hyn. O gael mynediad i'r mapiau unigol, closir
+at diriogaeth ddaearyddol benodol y daith dan sylw a gall y defnyddiwr
+glicio ar y pwyntiau sy'n dynodi'r lleoliadau i gael enw modern y
+lleoliad, yr enw a welir yn nhestun Pennant, gwybodaeth neilltuol (yn
+cyfeirio at adroddiad Pennant ac yn nodi ffactorau eraill o bwys o ran
+pennu'r lleoliad), a rhif(au) tudalen y cyfeiriad yn Pennant, *The View
+of India Extra Gangem, China and Japan*. Yn achos taith Johan Nieuhof, yr enw yn nhestun Pennant sy'n ymddangos wrth hofran uwchben y pwyntiau a farciwyd, ac o glicio gwelir enw'r lleoliad modern (neu 'Ddim ar gael' os nad oedd yn bosibl ei bennu); enw'r lleoliad yn y testun, drachefn; gwybodaeth bellach; a rhif(au) tudalen yn Pennant, *The View of India Extra Gangem, China and Japan*. At hyn, ceir cyflwyniad i'r map
+cyflawn ac i bob taith unigol mewn blwch ar ochr dde'r sgrin, â blwch
+islaw yn rhestru cyfeiriadau ac awgrymiadau ar gyfer darllen pellach.
+
+</font> <font size="4">
+
+***Cynllun lliwiau***\
+</font> <font size="3"> Defnyddiwyd lliwiau i farcio'r lleoliadau fel a
+ganlyn:
+
+***Map cyffredinol:***  
+
+-   *Gwledydd a thaleithiau:* siapiau oren /melyn
+
+-   *Lleoliadau eraill:* Pwyntiau glas tywyll: lleoliadau a enwir gan
+    Pennant. Pwyntiau glas golau: lleoliadau sydd yn rhan o un o'r chwe
+    thaith neilltuol
+
+***Mapiau teithiau neilltuol:***  
+
+-   *Pwyntiau glas tywyll:* lleoliadau ar y daith benodol a archwilir
+    gan y defnyddiwr  
+    
+-   *Siapiau melyn:* taleithiau a enwir ar y daith benodol a archwilir gan y defnyddiwr
+
+***Map Johan Nieuhof:***
+
+-   Pwyntiau glas tywyll: lleoliadau sicr. Pwyntiau glas golau:
+    lleoliadau ansicr     
+    
+    
+Ar hyd y bar llorweddol ar frig y sgrin, cynhwysir yn ogystal gyflwyniad sy'n gosod y map yng nghyd-destun gyrfa a gwaith Pennant (**Cyflwyniad**); a'r dudalen bresennol (**Gwybodaeth bellach**).
+
+</font>
+
+------------------------------------------------------------------------
+
+
+
+<font size="4">
+
+***Cydnabyddiaeth*** </font> <font size="3"> Casglwyd y data ar gyfer y
+wybodaeth yn y map hwn o gyfrol Pennant, *The View of India Extra Gangem,
+China and Japan*, a lluniwyd y nodiadau gan Ffion Mair Jones. Lluniwyd y map rhyngweithiol yn unol â'r disgrifiad uchod o dan 'Methodoleg' gan Yann Ciarán
+Ryan.
+
+</font>
